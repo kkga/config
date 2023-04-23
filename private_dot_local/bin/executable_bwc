@@ -1,0 +1,21 @@
+#!/bin/sh
+# Bitwarden cli wrapper
+# based on https://www.drumm.sh/blog/bw-cli
+
+# set -e
+
+copy_uname_and_passwd() {
+	printf "%s" "$1" | jq -r ".login.username" | wl-copy
+	printf "%s" "$1" | jq -r ".login.password" | wl-copy --primary
+}
+
+logins="$(bw list items --search "$1")"
+
+if [ "$(printf "%s" "$logins" | jq ". | length")" -eq 1 ]; then
+	login="$(printf "%s" "$logins" | jq ".[0]")"
+else
+	name="$(printf "%s" "$logins" | jq -r ".[].name" | fzf --exit-0)"
+	login="$(printf "%s" "$logins" | jq ".[] | select(.name == \"$name\")")"
+fi
+
+copy_uname_and_passwd "$login"

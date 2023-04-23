@@ -1,0 +1,12 @@
+[Unit]
+Description=Day/night gamma adjustments
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+# ExecStart=/usr/bin/wlsunset -S 08:00 -s 20:00
+ExecStart=/usr/bin/wlsunset -T 6500 -t 4000 -l 55.0 -L 37.0
+Restart=on-failure
+
+[Install]
+WantedBy=graphical-session.target

@@ -1,0 +1,12 @@
+#!/bin/sh
+
+pkill -x wf-recorder
+
+[ $? -ne 0 ] && {
+	notify-send -t 2000 'Screen sharing' 'Select an area to start the recording...'
+	geometry="$(slurp)"
+	{ sleep 1 && pkill -RTMIN+2 -x waybar; } &
+	wf-recorder --muxer=v4l2 --codec=rawvideo --pixel-format=yuv420p --file=/dev/video2 --geometry="$geometry"
+	pkill -RTMIN+2 -x waybar
+	notify-send 'Screen sharing' 'Recording is complete'
+}

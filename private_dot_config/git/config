@@ -1,0 +1,62 @@
+[user]
+    name = Gadzhi Kharkharov
+	email = me@kkga.me
+[core]
+    editor = hx
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[alias]
+    a = add
+    c = commit
+    co = checkout
+    cl = clone
+    b = branch
+    s = status
+    sl = status --long
+    l = log --oneline
+    d = diff
+    p = push
+    pl = pull
+    amend = commit --amend
+[merge]
+    conflictstyle = diff3
+[diff]
+    colorMoved = default
+	external = difft --tab-width 4
+[status]
+    short = true
+[push]
+	default = current
+[pull]
+    rebase = false
+[log]
+    date = short
+[init]
+    defaultBranch = master
+[format]
+    pretty = '%C(yellow)%h%Creset %C(magenta)%cd%Creset %d %s'
+[credential]
+    helper = /usr/libexec/git-core/git-credential-libsecret
+[fetch]
+    prune = true
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[bulkworkspaces]
+    autopull = "$HOME/repos/"
+	kakplugins = "$HOME/.config/kak/plugins"
+[color]
+	ui = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = yellow
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse

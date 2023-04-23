@@ -1,0 +1,31 @@
+#!/bin/sh
+# Kakoune wrapper. Used as "EDITOR=kaks".
+# Uses kks (https://github.com/kkga/kks) session, if it exists.
+# Otherwise, if inside a git directory, creates or connects to an existing session for it.
+# Otherwise, uses the 'default' session, which is started automatically by desktop.
+
+wait_for_session() {
+	session=$1
+	# Wait for session
+	# Grep in quiet mode with fixed strings and whole line switches
+	while ! kak -l | grep -q -F -x "$session"; do
+		sleep 0.1
+	done
+}
+
+kak -clear
+
+# if there's a kks session, just use it
+if [ -n "$KKS_SESSION" ]; then
+	kks edit "$@"
+# if the file is inside a git dir, try connect to a an existing session based on directory name or create a new one
+elif [ "$(git rev-parse --show-toplevel 2> /dev/null)" ]; then
+	git_dir=$(basename "$(git rev-parse --show-toplevel | tr -d '.')")
+	existing_session=$(kak -l | grep "$git_dir")
+	[ -z "$existing_session" ] && setsid kak -d -s "$git_dir" &
+	wait_for_session "$git_dir"
+	kak -c "$git_dir" "$@"
+# Otherwise use the 'default' session
+else
+	kak -c "default" "$@"
+fi

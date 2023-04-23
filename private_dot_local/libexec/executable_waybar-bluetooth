@@ -1,0 +1,11 @@
+#!/bin/sh
+
+powered="$(bluetoothctl show | grep 'Powered: yes')"
+
+if [ "$powered" ]; then
+	text="bt"
+	tooltip="$(bluetoothctl paired-devices)"
+	printf '{"text": "%s", "tooltip": "%s"}\n' "$text" "$tooltip"
+else
+	printf ''
+fi

@@ -1,0 +1,19 @@
+#!/bin/sh
+#
+# Watch vdirsyncer calendars.
+# Sync on changes and every 5 minutes.
+# Requires: inotify-tools
+
+sync() {
+	vdirsyncer sync --force-delete
+}
+
+while true; do
+	sync
+	inotifywait \
+		--event modify \
+		--event create \
+		--event delete \
+		--timeout 300 \
+		--recursive "$HOME/.local/share/calendars"
+done

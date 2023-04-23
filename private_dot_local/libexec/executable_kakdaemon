@@ -1,0 +1,3 @@
+#!/bin/sh
+cd "$HOME" || return
+exec setsid kak -d -s 'default'

@@ -1,0 +1,13 @@
+Host *
+  IgnoreUnknown AddKeysToAgent,UseKeychain
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519
+
+Host *.github.com
+  UpdateHostKeys yes
+  UseKeychain yes
+
+Host aur.archlinux.org
+  IdentityFile ~/.ssh/aur
+  User aur

@@ -1,0 +1,28 @@
+# espanso match file
+
+# For a complete introduction, visit the official docs at: https://espanso.org/docs/
+
+matches:
+  - trigger: ",,mg"
+    replace: "gadzhi.kha@gmail.com"
+  - trigger: ",,mk"
+    replace: "me@kkga.me"
+  - trigger: ",,n"
+    replace: "Gadzhi Kharkharov"
+
+  - trigger: ",,d"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%d/%m/%Y"
+
+  # Print the output of a shell command
+  - trigger: ":shell"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo 'Hello from your shell'"

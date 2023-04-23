@@ -1,0 +1,7 @@
+timeout 120 'brightnessctl s 10%' resume 'brightnessctl s 50%'
+timeout 300 'loginctl lock-session'
+timeout 600 'systemctl suspend'
+before-sleep 'loginctl lock-session'
+after-resume 'swaymsg "output * dpms on"'
+lock 'swaylock -fe -c 444444'
+# unlock 'swaymsg "output * dpms on"'

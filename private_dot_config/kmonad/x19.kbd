@@ -1,0 +1,57 @@
+(defcfg
+  input  (device-file "/dev/input/by-path/platform-i8042-serio-0-event-kbd")
+  output (uinput-sink "Thinkpad Keyboard")
+  fallthrough true
+)
+
+(defsrc
+  esc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft      z    x    c    v    b    n    m    ,    .    /    rsft
+       lctl lmet lalt           spc            ralt prnt rctl
+)
+
+(defalias
+  f (tap-hold-next-release 200 f (layer-toggle nav))
+  esc (tap-hold-next-release 200 esc lctl)
+  bck Back
+  fwd Forward
+  z (tap-hold-next-release 200 z lalt)
+  x (tap-hold-next-release 200 x lctl)
+  c (tap-hold-next-release 200 c lmet)
+
+  m (tap-hold-next-release 200 m rmet)
+  com (tap-hold-next-release 200 , rctl)
+  dot (tap-hold-next-release 200 . ralt)
+)
+
+
+;; (deflayer layer
+;;   _
+;;   _    _    _    _    _    _    _    _    _    _    _    _    _    _
+;;   _    _    _    _    _    _    _    _    _    _    _    _    _    _
+;;   _    _    _    _    _    _    _    _    _    _    _    _    _
+;;   _         _    _    _    _    _    _    _    _    _    _    _
+;;   _    _    _    _              _              _    _    _
+;; )
+
+(deflayer base
+  _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  @esc _    _    _    @f   _    _    _    _    _    _    _    _
+  _         @z   @x   @c   _    _    _    @m   @com @dot _    _
+       _    lalt lmet           _              rsft _    _
+)
+
+(deflayer nav
+  _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    home pgdn pgup end  @bck _    _    _
+  _    _    _    _    XX   _    left down up   rght bspc _    _
+  _         _    _    _    _    _    @fwd _    _    _    _    _
+       _    _    _              _              _    _    _
+)
+;; vi:ft=lisp

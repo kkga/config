@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+# check for a skip file before storing in clipboard history
+# use for copying passwords, e.g.: `touch /tmp/clipboard-skip` before wl-copy
+
+skip_file="/tmp/clipboard-skip"
+
+if [ -f "$skip_file" ]; then
+	rm "$skip_file"
+else
+	cat < /dev/stdin | cliphist store
+fi

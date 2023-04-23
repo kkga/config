@@ -1,0 +1,23 @@
+#!/bin/sh
+
+sock_path="${XDG_RUNTIME_DIR}/foot-${WAYLAND_DISPLAY}.sock"
+
+# Server already running?
+[ -S "${sock_path}" ] && exec footclient --server="${sock_path}" "${@}"
+
+# Notification FD; the foot server will print its PID to this file
+# when it’s up and ready to receive footclient connections.
+pid_fifo=$(mktemp --dry-run)
+mkfifo -m 600 "${pid_fifo}"
+exec 3<> "${pid_fifo}"
+
+# Early unlink
+rm "${pid_fifo}"
+
+nohup foot --server="${sock_path}" --print-pid=3 > /dev/null &
+
+# Wait for server to start
+read -r pid <&3
+exec 3<&-
+
+exec footclient --server="${sock_path}" "${@}"

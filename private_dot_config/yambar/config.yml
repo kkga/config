@@ -1,0 +1,291 @@
+fg: &fg bcbcbcff
+fg_dim: &fg_dim bcbcbcaa
+blue: &blue 87afd7ff
+blue_dim: &blue_dim 87afd7aa
+yellow: &yellow d7af5fff
+yellow_dim: &yellow_dim d7af5faa
+red: &red d7875fff
+bg: &bg 000000ff
+font: &font monospace:weight=medium:size=15
+font_bold: &font_bold monospace:weight=bold:size=15
+
+bar:
+  height: 20
+  location: top
+  spacing: 12
+  margin: 0
+
+  font: *font
+  foreground: *fg
+  background: *bg
+
+  left:
+    # - river:
+    #     anchors:
+    #       - string: &default { text: " {name} ", foreground: *fg_dim }
+    #       - focused:
+    #           &focused { text: "[{id}]", font: *font_bold, foreground: *fg }
+    #     content:
+    #       map:
+    #         tag: state
+    #         values:
+    #           unfocused: { string: { text: " {id} " } }
+    #           focused: { string: { <<: [*focused] } }
+    #           invisible:
+    #             map:
+    #               tag: occupied
+    #               values:
+    #                 false: { empty: {} }
+    #                 true: { string: { text: " {id} " } }
+    - i3:
+        sort: ascending
+        anchors:
+          - string: &default { text: " {name} ", foreground: *fg_dim }
+          - focused:
+              &focused { text: "[{name}]", font: *font_bold, foreground: *fg }
+          - urgent: &urgent
+              deco: { background: { color: *yellow_dim } }
+        content:
+          "":
+            map:
+              tag: state
+              values:
+                focused: { string: { <<: [*focused] } }
+                unfocused: { string: { text: "*{name} " } }
+                invisible: { string: { <<: [*default] } }
+                urgent: { string: { <<: [*default, *urgent] } }
+    - foreign-toplevel:
+        content:
+          map:
+            tag: activated
+            values:
+              false: { empty: {} }
+              true:
+                - string:
+                    { text: "{app-id}", font: *font_bold, foreground: *fg_dim }
+                - string: { text: ": {title}", max: 64, foreground: *fg_dim }
+
+  center:
+    - i3:
+        content:
+          "":
+            empty: {}
+          current:
+            map:
+              tag: mode
+              default:
+                {
+                  string:
+                    {
+                      deco: { background: { color: *yellow_dim } },
+                      text: " {mode} ",
+                      foreground: *bg,
+                      font: *font_bold,
+                    },
+                }
+              values:
+                default: { string: { text: "" } }
+
+    - script:
+        path: /home/kkga/.local/libexec/yambar-recording
+        poll-interval: 5
+        content:
+          map:
+            tag: rec
+            default:
+              empty: {}
+            values:
+              true:
+                string:
+                  {
+                    on-click: "killall -s SIGINT wf-recorder",
+                    deco: { background: { color: *red } },
+                    text: " REC ",
+                    foreground: *bg,
+                    font: *font_bold,
+                  }
+
+  right:
+    - cpu:
+        interval: 2500
+        content:
+          map:
+            tag: cpu
+            values:
+              0: { empty: {} }
+              1: { empty: {} }
+              2: { empty: {} }
+              3: { empty: {} }
+              4: { empty: {} }
+              5: { empty: {} }
+              6: { empty: {} }
+              7: { empty: {} }
+              8: { empty: {} }
+              9: { empty: {} }
+            default:
+              - string: { text: "CPU", foreground: *fg_dim, font: *font_bold }
+              - progress-bar:
+                  tag: cpu
+                  length: 10
+                  start: { string: { text: "[", foreground: *fg_dim } }
+                  end: { string: { text: "]", foreground: *fg_dim } }
+                  fill: { string: { text: "*", foreground: *yellow } }
+                  empty: { string: { text: "-", foreground: *fg_dim } }
+                  indicator:
+                    {
+                      string: { text: "*", foreground: *red, font: *font_bold },
+                    }
+
+    - script:
+        path: /usr/bin/playerctl
+        args:
+          - "--follow"
+          - "metadata"
+          - "-f"
+          - |
+            status|string|{{status}}
+            artist|string|{{artist}}
+            title|string|{{title}}
+        content:
+          map:
+            tag: status
+            values:
+              Paused: { empty: {} }
+              Playing:
+                string: { text: "{artist} - {title}" }
+
+    - script:
+        path: /home/kkga/.local/libexec/yambar-systemd
+        poll-interval: 600
+        args: []
+        content:
+          map:
+            tag: failed
+            values:
+              false: { empty: {} }
+              true:
+                {
+                  string:
+                    {
+                      text: "!{failed_system}+{failed_user}",
+                      foreground: *red,
+                    },
+                }
+
+    - script:
+        path: /home/kkga/.local/libexec/yambar-pacman
+        args: []
+        content:
+          map:
+            tag: pkg
+            default:
+              - string: { text: "↑", foreground: *blue_dim, font: *font_bold }
+              - string: { text: "{pacman}+{aur}={pkg}", foreground: *blue }
+            values:
+              0: { empty: {} }
+
+    - script:
+        path: /home/kkga/.local/libexec/yambar-xbps
+        poll-interval: 600
+        content:
+          map:
+            tag: count
+            default:
+              - string: { text: "upd", foreground: *blue_dim, font: *font_bold }
+              - string: { text: "{count}", foreground: *blue }
+            values:
+              0: { empty: {} }
+
+    - script:
+        path: /home/kkga/.local/libexec/yambar-yadm
+        poll-interval: 300
+        content:
+          map:
+            tag: count
+            default:
+              - string: { text: "*", foreground: *yellow_dim, font: *font_bold }
+              - string: { text: "{count}", foreground: *yellow }
+            values:
+              0: { empty: {} }
+
+    - script:
+        path: /home/kkga/.local/libexec/yambar-vpn
+        poll-interval: 60
+        content:
+          map:
+            tag: connected
+            values:
+              false:
+                empty: {}
+              true:
+                # - string: { text: '', font: *font_bold, foreground: *blue_dim }
+                - string: { text: "{hostname}", foreground: *blue }
+
+    - network:
+        name: wlan0
+        content:
+          map:
+            tag: state
+            values:
+              down:
+                - string: { text: "net", font: *font_bold, foreground: *fg_dim }
+                - string: { text: "--X--", foreground: *red }
+              up:
+                - string:
+                    { text: "net ", font: *font_bold, foreground: *fg_dim }
+                - string: { text: "{ssid}" }
+
+    - alsa:
+        card: default
+        mixer: Master
+        content:
+          map:
+            tag: online
+            values:
+              false:
+                - string: { text: "vol", font: *font_bold, foreground: *fg_dim }
+                - string: { text: "--X--", foreground: *red }
+              true:
+                map:
+                  tag: muted
+                  values:
+                    true:
+                      - string:
+                          { text: "MUTE", font: *font_bold, foreground: *red }
+                    false:
+                      empty: {}
+
+    - battery:
+        name: BAT0
+        poll-interval: 30
+        content:
+          map:
+            tag: state
+            default:
+              - string: { text: "B", font: *font_bold, foreground: *fg_dim }
+              - ramp:
+                  tag: capacity
+                  items:
+                    - string: { text: "{capacity}", foreground: *red }
+                    - string: { text: "{capacity}", foreground: *red }
+                    - string: { text: "{capacity}" }
+                    - string: { text: "{capacity}" }
+                    - string: { text: "{capacity}" }
+                    - string: { text: "{capacity}" }
+                    - string: { text: "{capacity}" }
+                    - string: { text: "{capacity}" }
+                    - string: { text: "{capacity}" }
+                    - string: { text: "{capacity}" }
+              - string: { text: "({estimate})", foreground: *fg_dim }
+            values:
+              charging:
+                - string: { text: "++", font: *font_bold, foreground: *blue }
+                - string: { text: "{capacity}" }
+                - string: { text: " ({estimate})", foreground: *fg_dim }
+
+    - clock:
+        time-format: "%H:%M"
+        date-format: "%a %-d %b"
+        content:
+          - string: { text: "{date}", foreground: *fg_dim }
+          - string: { text: " {time}" }

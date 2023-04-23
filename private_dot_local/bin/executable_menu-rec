@@ -1,0 +1,69 @@
+#!/bin/sh
+
+pkill -x wf-recorder -SIGINT
+
+type=$(
+	printf "video\ngif" | $DMENU
+)
+action=$(
+	printf "save\nshare" | $DMENU
+)
+audio=$(
+	printf "no-audio\naudio" | $DMENU
+)
+
+path="$HOME/videos/record_$(date +'%Y-%m-%d-%H%M%S')"
+
+case "$type" in
+	video)
+		notify-send -t 2000 'Video recording' 'Select an area to start the recording...'
+		;;
+	gif)
+		notify-send -t 2000 'GIF recording' 'Select an area to start the recording...'
+		;;
+esac
+
+if [ -n "$type" ] && [ -n "$action" ]; then
+	geometry=$(swaymsg -t get_tree | jq -r '.. | select(.pid? and .visible?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | slurp)
+	{ sleep 1 && pkill -RTMIN+2 -x waybar; } &
+	case "$audio" in
+		audio)
+			wf-recorder -a -g "$geometry" -f "$path.mkv"
+			;;
+		no-audio)
+			wf-recorder -g "$geometry" -f "$path.mkv"
+			;;
+	esac
+	pkill -RTMIN+2 -x waybar
+
+	case "$type" in
+		video)
+			notify-send -t 2000 'Screen recording' "Compressing file..."
+			ffmpeg -i "$path.mkv" "$path-comp.mp4"
+			case "$action" in
+				save)
+					wl-copy -t video/mp4 < "$path-comp.mp4"
+					notify-send 'Video recording' "Recording is ready: $path-comp.mp4"
+					term-popup lf -command "select $path-comp.mp4" "$HOME/videos/"
+					;;
+				share)
+					share "$path-comp.mp4"
+					;;
+			esac
+			;;
+		gif)
+			notify-send -t 2000 'GIF recording' "Encoding to GIF format..."
+			ffmpeg -i "$path.mkv" -vf "fps=15,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" "$path.gif"
+			case "$action" in
+				save)
+					wl-copy -t image/gif < "$path.gif"
+					notify-send 'GIF recording' "Recording is ready: $path.gif"
+					term-popup lf -command "select $path.gif" "$HOME/videos/"
+					;;
+				share)
+					share "$path.gif"
+					;;
+			esac
+			;;
+	esac
+fi

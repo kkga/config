@@ -1,0 +1,31 @@
+#!/bin/sh
+#
+# Shows todoman tasks due in the next 24h
+# https://github.com/pimutils/todoman
+# https://git.sr.ht/~whynothugo/dotfiles/tree/main/item/home/.local/lib/waybar-khal
+
+set -e
+
+render() {
+	TASKS="$(
+		todo list --due 24
+	)"
+
+	if [ -z "$TASKS" ]; then
+		TEXT=""
+		CLASS="no-tasks"
+	else
+		TEXT="$(echo "$TASKS" | wc -l)"
+		CLASS="tasks"
+		TOOLTIP="$(printf "%s" "$TASKS")"
+	fi
+
+	jq --compact-output \
+		--null-input \
+		--arg text "$TEXT" \
+		--arg class "$CLASS" \
+		--arg tooltip "$TOOLTIP" \
+		'{"text": $text, "class": $class, "tooltip": $tooltip}'
+}
+
+render

@@ -1,0 +1,2 @@
+#!/bin/sh
+exec gammastep -l 55:37 -t 6500K:3200K

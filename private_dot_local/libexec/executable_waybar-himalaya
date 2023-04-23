@@ -1,0 +1,16 @@
+#!/bin/sh
+
+render() {
+	response="$(himalaya --output json search not seen | jq '.response')"
+	not_seen_count="$(printf "%s" "$response" | jq length)"
+
+	if [ ! "$not_seen_count" = "0" ]; then
+		list=$(printf "%s" "$response" |
+			jq '[to_entries[] | {"sender": .value.sender, "subject": .value.subject}] | map("<span weight=\"bold\">- "+.sender+":</span> "+.subject[0:40]+"...") | join("\n")')
+		printf '{"text": "M <span weight=\"bold\">%s</span>", "tooltip": %s}\n' "$not_seen_count" "$list"
+	else
+		printf ''
+	fi
+}
+
+render

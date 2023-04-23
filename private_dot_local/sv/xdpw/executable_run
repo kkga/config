@@ -1,0 +1,2 @@
+#!/bin/sh
+exec /usr/libexec/xdg-desktop-portal-wlr -r

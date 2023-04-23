@@ -1,0 +1,150 @@
+theme = "dark_plus"
+
+[editor]
+cursorline = true
+# gutters = ["diagnostics", "spacer", "line-numbers", "spacer"]
+bufferline = "never"
+auto-format = true
+completion-trigger-len = 0
+idle-timeout = 0
+# completion-replace = true
+# color-modes = true
+
+# [editor.file-picker]
+# hidden = false
+# parents = true
+# git-ignore = true
+# git-global = true
+
+[editor.soft-wrap]
+enable = true
+
+[editor.indent-guides]
+render = true
+character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+
+[editor.statusline]
+left = ["mode", "separator", "file-name", "spinner"]
+center = ["version-control"]
+right = [
+  "diagnostics",
+  "separator",
+  "selections",
+  "separator",
+  "file-type",
+  "separator",
+  "position",
+  "position-percentage",
+]
+separator = "│"
+mode.normal = "N"
+mode.insert = "I"
+mode.select = "S"
+
+[editor.lsp]
+display-messages = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[keys.normal]
+ret = 'command_mode'
+q = 'move_prev_word_start'
+"#" = "toggle_comments"
+"*" = ["move_prev_word_start", "move_next_word_end", "search_selection"]
+
+a = ['move_char_right', 'insert_mode']
+C-r = ":reload"
+
+# Paragraph motions
+C-k = ["goto_prev_paragraph", "collapse_selection"]
+C-j = ["goto_next_paragraph", "collapse_selection", "move_line_down"]
+
+# Kakoune-like selections/motions
+H = 'extend_char_left'
+J = 'extend_line_down'
+K = 'extend_line_up'
+L = 'extend_char_right'
+W = 'extend_next_word_start'
+E = 'extend_next_word_end'
+Q = 'extend_prev_word_start'
+A-W = 'extend_next_long_word_start'
+A-E = 'extend_next_long_word_end'
+A-Q = 'extend_prev_long_word_start'
+X = 'extend_line_below'
+x = ['extend_to_line_bounds', 'ensure_selections_forward']
+A-w = 'move_next_long_word_start'
+A-e = 'move_next_long_word_end'
+A-b = 'move_prev_long_word_start'
+A-h = ['ensure_selections_forward', 'flip_selections', 'extend_to_line_start']
+A-l = ['ensure_selections_forward', 'extend_to_line_end']
+'{' = [
+  'ensure_selections_forward',
+  'flip_selections',
+  'select_mode',
+  'goto_prev_paragraph',
+  'exit_select_mode',
+]
+'}' = [
+  'ensure_selections_forward',
+  'select_mode',
+  'goto_next_paragraph',
+  'exit_select_mode',
+]
+G.e = [
+  'select_mode',
+  'ensure_selections_forward',
+  'goto_file_end',
+  'exit_select_mode',
+]
+G.g = [
+  'select_mode',
+  'ensure_selections_forward',
+  'goto_file_start',
+  'exit_select_mode',
+]
+
+A-j = 'join_selections'
+A-k = 'keep_selections'
+
+# Left-right motions
+# f = ['ensure_selections_forward', 'extend_next_char']
+# t = ['ensure_selections_forward', 'extend_till_char']
+# F = ['ensure_selections_forward', 'flip_selections', 'extend_prev_char']
+# T = ['ensure_selections_forward', 'flip_selections', 'extend_till_prev_char']
+
+# Various motions
+# m.x = ['extend_to_line_bounds', 'trim_selections']
+# M = ['select_mode', 'match_brackets', 'exit_select_mode']
+
+# unimpaired option toggle off
+[keys.normal.'['.o]
+space = ':set whitespace.render none'
+tab = ':set indent-guides.render false'
+w = ':set soft-wrap.enable false'
+c = ':set cursorline false'
+h = ':set lsp.display-inlay-hints false'
+b = ':theme dark_plus'
+
+# unimpaired option toggle on
+[keys.normal.']'.o]
+space = ':set whitespace.render all'
+tab = ':set indent-guides.render true'
+w = ':set soft-wrap.enable true'
+c = ':set cursorline true'
+h = ':set lsp.display-inlay-hints true'
+b = ':theme emacs'
+
+
+[keys.normal.space]
+"x" = ":buffer-close"
+"w" = ":write"
+
+
+[keys.select]
+ret = 'command_mode'
+q = 'extend_prev_word_start'
+Q = 'extend_prev_long_word_start'

@@ -1,0 +1,66 @@
+[[language]]
+name = "clojure"
+formatter = { command = 'joker', args = ['--format', '-'] }
+auto-format = true
+
+[[language]]
+name = "toml"
+scope = "source.toml"
+injection-regex = "toml"
+file-types = ["toml"]
+roots = []
+comment-token = "#"
+language-server = { command = "" }
+# language-server = { command = "taplo", args = ["lsp", "stdio"] }
+indent = { tab-width = 2, unit = "  " }
+formatter = { command = 'taplo', args = ['format', '-'] }
+auto-format = true
+
+[[language]]
+name = "markdown"
+auto-format = true
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "md"] }
+language-server = { command = "zk", args = [
+  'lsp',
+  "--log",
+  "~/.tmp/zk-lsp.log",
+] }
+
+# Needs multiple language-servers in helix: https://github.com/helix-editor/helix/pull/2507
+# [[language]]
+# name = "tailwind-svelte"
+# scope = "source.svelte"
+# roots = ["tailwind.config.js","tailwind.config.cjs"]
+# file-types = ["svelte"]
+# language-server = { language-id = "svelte", command = "tailwindcss-language-server",args = ["--stdio"] }
+# config = { }
+
+[[language]]
+name = "fish"
+formatter = { command = "fish_indent" }
+auto-format = true
+
+[[language]]
+name = 'svelte'
+auto-format = true
+
+[[language]]
+name = "json"
+auto-format = true
+# formatter = { command = 'deno', args = ["fmt", "-", "--ext", "json" ] }
+
+[[language]]
+name = "javascript"
+auto-format = true
+
+[[language]]
+name = "jsx"
+auto-format = true
+
+[[language]]
+name = "typescript"
+auto-format = true
+
+[[language]]
+name = "tsx"
+auto-format = true

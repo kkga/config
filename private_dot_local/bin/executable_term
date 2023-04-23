@@ -1,0 +1,31 @@
+#!/bin/sh
+
+if test "$1" = '-e'; then
+	if test "$#" -lt 2; then
+		echo "Error: missing argument for -e" >&2
+		exit 1
+	fi
+	shift 1
+fi
+
+case "$XDG_SESSION_TYPE" in
+	wayland)
+		exec footclient -- "$@" &
+		;;
+	x11)
+		if test "$#" -gt 0; then
+			exec xterm -e "$@" &
+		else
+			exec xterm &
+		fi
+		;;
+	tty)
+		if test "$TMUX"; then
+			exec tmux new-window -- "$@"
+		fi
+		;;
+	*)
+		echo "Error: unknown XDG_SESSION_TYPE value: '$XDG_SESSION_TYPE'" >&2
+		exit 1
+		;;
+esac

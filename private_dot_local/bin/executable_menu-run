@@ -1,0 +1,21 @@
+#!/bin/sh
+#
+# desktop run menu that also shows binaries in path
+# depends: https://github.com/enkore/j4-dmenu-desktop
+#
+# enter: run
+# alt-enter: open a new term window with selection as prefilled command line
+
+# SHELL=bash
+
+exec j4-dmenu-desktop \
+	--usage-log="$HOME/.cache/j4" \
+	--no-generic \
+	--display-binary \
+	--use-xdg-de \
+	--term="term" \
+	--wrapper='swaymsg exec --' \
+	--dmenu="$DMENU"
+#	--dmenu="sh -c \"(cat; (stest -flx $(echo "$PATH" | tr : ' ') | sort -u)) | $DMENU --bind='tab:down,btab:up,alt-enter:execute(nohup term-popup-type {} >/dev/null &)+abort'\""
+
+# --dmenu="fuzzel-menu -d"

@@ -1,0 +1,174 @@
+{
+  "layer": "bottom",
+  "height": 16,
+  "position": "bottom",
+  "modules-left": [
+    "sway/mode",
+    "clock",
+    "custom/scratchpad",
+    "custom/recording",
+    "custom/media"
+  ],
+  "modules-center": ["sway/workspaces"],
+  "modules-right": [
+    "custom/xbps",
+    "custom/pacman",
+    "custom/yadm",
+    "cpu",
+    "pulseaudio",
+    "network",
+    "custom/tailscale",
+    "custom/vpn",
+    "battery",
+    "tray"
+  ],
+
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": false,
+    "format": "{index}"
+  },
+  "sway/window": {
+    "format": "{}",
+    "max-length": 80
+  },
+  "sway/mode": {
+    "format": "<b> - {} - </b>",
+    "max-length": 64
+  },
+  "clock": {
+    "tooltip-format": "{:%Y %B}\n{calendar}",
+    "format": "{:%H:%M - %a %d %b}",
+    "on-click": "$HOME/.local/libexec/waybar-dnd.mjs toggle"
+  },
+  "battery": {
+    "format": "b {capacity}%",
+    // "format-charging": "b <b>{capacity}%</b>",
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format-time": "{H}:{M:02}"
+  },
+  "network": {
+    //"interface": "wlan0",
+    "format-wifi": "W",
+    "format-ethernet": "{ifname}",
+    "format-linked": "{ifname}",
+    "format-disconnected": "✕",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)\n↓ {bandwidthDownBits}\n↑ {bandwidthUpBits}",
+    "tooltip-format": "{ifname}\n{ipaddr}/{cidr}\n↓ {bandwidthDownBits}\n↑ {bandwidthUpBits}",
+    "on-click": "nm-connection-editor"
+  },
+  "pulseaudio": {
+    "format": "V {volume}%{icon}",
+    "format-bluetooth": "BT {volume}% {format_source}",
+    "format-muted": "v <b>MUT</b>",
+    "format-bluetooth-muted": "BT MUT {format_source}",
+    "format-source": "VOL {volume}%",
+    "format-source-muted": "MUT {volume}",
+    "format-icons": {
+      "headphone": " (HP)",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ""
+    },
+    "on-click": "pavucontrol"
+  },
+  "cpu": {
+    "format": "C {usage}%",
+    "interval": 5,
+    "states": {
+      "warning": 10
+    }
+  },
+  "sway/language": {
+    "format": "{}"
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 16
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "II",
+      "deactivated": "II"
+    }
+  },
+  "bluetooth": {
+    "format": "{icon}",
+    "format-alt": "bluetooth: {status}",
+    "format-icons": {
+      "enabled": "on",
+      "disabled": "off"
+    },
+    "tooltip-format": "{}"
+  },
+
+  "custom/scratchpad": {
+    "interval": 5,
+    "exec": "swaymsg -t get_tree | jq 'recurse(.nodes[]) | first(select(.name==\"__i3_scratch\")) | .floating_nodes | length | select(. >= 1)'",
+    "format": "<b>- [{}] -</b>",
+    "on-click": "swaymsg 'scratchpad show'",
+    "on-click-right": "swaymsg 'move scratchpad'",
+    "tooltip": false
+  },
+  "custom/media": {
+    "format": "♫{icon} {}",
+    "return-type": "json",
+    "format-icons": {
+      "Playing": "",
+      "Paused": " (paused)"
+    },
+    "max-length": 50,
+    "exec": "pkill playerctl; playerctl metadata --format '{\"text\": \"<b>{{artist}}</b> - {{title}}\", \"tooltip\": \"{{playerName}}: {{artist}} - {{title}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+    "on-click": "playerctl play-pause"
+  },
+  "custom/vpn": {
+    "format": "{}",
+    "exec": "$HOME/.local/libexec/waybar-vpn",
+    "return-type": "json",
+    "interval": 30,
+    "on-click": "floatterm -H nmcli connection show"
+  },
+  "custom/tailscale": {
+    "format": "TS",
+    "exec": "echo '{\"class\": \"connected\", \"tooltip\": \"TAILSCALE\"}'",
+    "exec-if": "test -d /proc/sys/net/ipv4/conf/tailscale0",
+    "return-type": "json",
+    "interval": 5
+  },
+  "custom/recording": {
+    "exec": "$HOME/.local/libexec/waybar-recording",
+    "signal": 2,
+    "interval": "once",
+    "return-type": "json",
+    "on-click": "killall -s SIGINT wf-recorder"
+  },
+  "custom/yadm": {
+    "format": "* {}",
+    "signal": 4,
+    "return-type": "json",
+    "exec": "$HOME/.local/libexec/waybar-yadm",
+    "interval": 600
+  },
+  "custom/xbps": {
+    "format": "↓ {}",
+    "signal": 4,
+    "return-type": "json",
+    "exec": "$HOME/.local/libexec/waybar-xbps",
+    "interval": 600
+  },
+  "custom/pacman": {
+    "format": "↓ {}",
+    "signal": 4,
+    "return-type": "json",
+    "exec": "$HOME/.local/libexec/waybar-pacman",
+    "interval": 600
+  }
+}
+// vim: ft=json:

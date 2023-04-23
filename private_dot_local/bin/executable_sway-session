@@ -1,0 +1,16 @@
+#!/bin/sh
+#
+# This script is executed by greetd after login.
+
+# These are imported experimentally:
+systemctl --user import-environment XDG_SEAT XDG_SESSION_CLASS XDG_SESSION_ID
+
+# Running sway as a systemd service.
+# - Variables from environment.d(5) get passed to sway itself.
+# - Logs end up journalctl.
+# - exec means that we log out when sway exits.
+# - Other shell-specific environemnt variables are not passed down.
+# - Running in `session.slice` makes sure the OOM avoids killing it.
+# - ExecStopPost= does a cleanup of the systemd environment variables.
+exec systemctl --user start --wait sway
+

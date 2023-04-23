@@ -1,0 +1,11 @@
+#!/bin/sh
+# open a floatterm with arguments as commandline input
+# requires wtype
+
+# exit fullscreen if running Sway
+if [ -n "$SWAYSOCK" ]; then
+	swaymsg fullscreen disable > /dev/null
+fi
+
+footclient -W '100x32' --log-level='warning' --app-id='popup' &
+wtype -s 500 "$@" -k space

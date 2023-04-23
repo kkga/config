@@ -1,0 +1,7 @@
+#!/bin/sh
+exec swayidle -d -w \
+	timeout 600 'loginctl lock-session' \
+	timeout 1800 'loginctl suspend' \
+	resume 'swaymsg "output * dpms on"' \
+	before-sleep 'loginctl lock-session' \
+	lock 'swaylock -fe -c 333333'

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Firefox Nightly
+Exec=/home/kkga/.local/bin/firefox-nightly/firefox %u
+Terminal=false
+Icon=firefox-nightly
+Type=Application
+Categories=Network;WebBrowser;
+MimeType=text/html;text/xml;application/xhtml+xml;text/mml;x-scheme-handler/http;x-scheme-handler/https;

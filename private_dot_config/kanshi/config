@@ -1,0 +1,17 @@
+profile laptop {
+    output eDP-1 enable
+    exec systemctl --user restart yambar.service
+}
+
+profile ultrafine {
+    output eDP-1 enable scale 1 position 0,0
+    output DP-3 enable position 1920,0 scale 1
+    output DP-4 disable
+}
+
+profile mateview {
+    output eDP-1 enable position 960,2560 scale 1
+    output DP-3 enable position 0,0 scale 1
+    exec swaymsg workspace 1, move workspace to DP-3
+    exec systemctl --user restart yambar.service
+}

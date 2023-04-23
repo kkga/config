@@ -1,0 +1,25 @@
+disableStartupPopups: false
+notARepository: "quit"
+
+git:
+  showFileTree: false
+  paging:
+    colorArg: always
+    pager: delta --dark --wrap-max-lines 0 --file-style none --hunk-header-decoration-style none --paging=never
+
+os:
+  editCommand: "kks-edit"
+  editCommandTemplate: "{{editor}} {{filename}} +{{line}}"
+
+gui:
+  showBottomLine: false
+  showListFooter: false
+  showCommandLog: false
+  theme:
+    selectedLineBgColor:
+      - default
+    selectedRangeBgColor:
+      - default
+    activeBorderColor:
+      - green
+      - bold

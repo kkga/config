@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# exit fullscreen if running Sway
+if [ -n "$SWAYSOCK" ]; then
+	swaymsg fullscreen disable > /dev/null
+fi
+
+footclient -W '88x40' -o colors.alpha=0.95 --log-level='warning' --app-id='popup' "$@"

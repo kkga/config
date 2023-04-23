@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=MagicaVoxel
+GenericName=Voxel Editor
+Exec=wine ~/sync/MagicaVoxel-0.99.6.3-win64/MagicaVoxel.exe
+Terminal=false
+StartupNotify=false
