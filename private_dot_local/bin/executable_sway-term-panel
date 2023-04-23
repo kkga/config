@@ -1,7 +1,0 @@
-#!/bin/sh
-#
-# open a "panel" terminal in a split container with the focused window
-
-swaymsg splith
-swaymsg for_window [ app_id="(?i)panel" ] resize set width 440px
-footclient -W '40x80' --log-level='warning' --app-id='panel' "$@"

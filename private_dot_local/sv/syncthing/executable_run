@@ -1,3 +1,0 @@
-#!/bin/sh
-exec 2>&1
-exec syncthing -no-browser -no-restart -logflags=0

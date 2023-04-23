@@ -1,3 +1,0 @@
-#!/bin/sh
-
-exec wl-paste --watch "/home/kkga/.local/libexec/clipboard-skip-or-store"

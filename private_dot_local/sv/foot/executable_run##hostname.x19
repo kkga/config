@@ -1,3 +1,0 @@
-#!/bin/sh
-# exec foot --server -o font="monospace:style=SemiLight" -o font-bold="monospace:style=Bold"
-exec foot --server --font=monospace:size=13.5

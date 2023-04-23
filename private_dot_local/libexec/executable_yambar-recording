@@ -1,9 +1,0 @@
-#!/bin/sh
-
-if pgrep -x wf-recorder > /dev/null; then
-	echo "rec|bool|true"
-	echo ""
-else
-	echo "rec|bool|false"
-	echo ""
-fi

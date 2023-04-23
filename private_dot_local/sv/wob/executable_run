@@ -1,3 +1,0 @@
-#!/bin/sh
-mkfifo $SWAYSOCK.wob
-exec tail -f $SWAYSOCK.wob | wob -a top -a left -W 200 -H 32 -M 8 -o 2 -b 2 -p 2

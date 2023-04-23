@@ -1,7 +1,0 @@
-#!/bin/sh
-
-if pgrep -x wf-recorder > /dev/null; then
-	printf '{"text": "- REC -"}\n'
-else
-	printf ''
-fi

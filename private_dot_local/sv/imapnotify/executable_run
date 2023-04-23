@@ -1,3 +1,0 @@
-#!/bin/sh
-
-exec goimapnotify -conf $XDG_CONFIG_HOME/imapnotify/kkga.conf
