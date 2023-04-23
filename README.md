@@ -1,5 +1,5 @@
 Relatively simple Linux config for desktop, managed with a
-[bare git repository][git-bare].
+[chezmoi][https://www.chezmoi.io/].
 
 ![](/private_dot_local/private_share/desktop.png)
 
