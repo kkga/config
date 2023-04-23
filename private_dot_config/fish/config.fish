@@ -1,3 +1,5 @@
+source $__fish_config_dir/vars.fish
+
 if [ $OS = Darwin ]
     fish_add_path /opt/homebrew/bin
     fish_add_path /opt/homebrew/sbin

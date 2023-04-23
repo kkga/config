@@ -1,4 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Text editor
-Exec=footclient kak %u

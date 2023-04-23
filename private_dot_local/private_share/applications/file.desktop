@@ -1,4 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=File Manager
-Exec=footclient lf %u
