@@ -38,7 +38,7 @@ cleanup = true
 
 [git]
 #max_concurrency = 5
-repos = ["~/.config/kak/bundle/plugins/*", "~/repos/_autopull/*"]
+repos = ["~/.config/kak/bundle/plugins/*", "~/repos/*"]
 
 # Don't pull the predefined git repos
 #predefined_repos = false
@@ -54,9 +54,7 @@ repos = ["~/.config/kak/bundle/plugins/*", "~/repos/_autopull/*"]
 #"Emacs Snapshot" = "rm -rf ~/.emacs.d/elpa.bak && cp -rl ~/.emacs.d/elpa ~/.emacs.d/elpa.bak"
 
 # Custom commands
-[commands]
-"YADM Status" = "sh -c 'if command -v yadm > /dev/null; then yadm status; fi'"
-# "Waybar refresh" = "sh -c 'if pgrep waybar > /dev/null; then pkill -RTMIN+4 waybar; fi'"
+# [commands]
 # "Update repos" = "git bulk -q -w autopull pull"
 # "Update Kakoune plugins" = "fish -c 'kakplug update'"
 
