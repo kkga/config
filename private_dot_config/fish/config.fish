@@ -1,7 +1,6 @@
 # VARIABLES
 
 set -gx OS (uname -s)
-set -gx GOPATH $HOME/.local/go
 set -gx DENO_INSTALL $HOME/.deno
 set -gx PNPM_HOME /Users/kkga/Library/pnpm
 set -gx FZF_DEFAULT_COMMAND 'fd --type=file'
@@ -36,8 +35,6 @@ end
 fish_add_path \
     "$HOME/.yarn/bin" \
     "$DENO_INSTALL/bin" \
-    "$GOPATH/bin" \
-    "$BUN_INSTALL/bin" \
     "$HOME/.cargo/bin" \
     "$PNPM_HOME"
 fish_add_path -m "$HOME/.local/bin"
