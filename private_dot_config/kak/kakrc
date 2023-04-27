@@ -1,0 +1,85 @@
+eval %sh{
+  kks init
+  kak-lsp --kakoune -s "$kak_session" -c "$HOME/.config/kak/kak-lsp.toml"
+}
+
+source "%val{config}/bundle/plugins/kak-bundle/rc/kak-bundle.kak"
+
+bundle-register-and-load \
+  https://codeberg.org/jdugan6240/kak-bundle %{} \
+  https://github.com/Delapouite/kakoune-buffers %{
+    map global buffers L ':buffer *lint-output*<ret>' -docstring "lint output"
+    map global buffers D ':buffer *diagnostics*<ret>' -docstring "diagnostics"
+    map global normal <b> ':enter-buffers-mode<ret>' -docstring "enter buffers mode"
+    map global normal <a-b> ':enter-user-mode -lock buffers<ret>' -docstring "enter buffers mode (lock)"
+  } \
+  https://github.com/alexherbo2/auto-pairs.kak %{
+    enable-auto-pairs
+  } \
+  https://github.com/Delapouite/kakoune-cd %{} \
+  https://gitlab.com/Screwtapello/kakoune-shellcheck %{} \
+  https://gitlab.com/Screwtapello/kakoune-state-save  %{} \
+  https://github.com/listentolist/kakoune-fandt %{
+    require-module fandt
+    set-option global fandt_jump ";"
+  } \
+  https://github.com/listentolist/kakoune-table %{
+    map global user T ": enter-user-mode -lock table<ret>" -docstring "table (lock)"
+  } \
+  https://github.com/occivink/kakoune-sudo-write %{} \
+  https://github.com/occivink/kakoune-vertical-selection %{
+    map global object v '<esc>: vertical-selection-up-and-down<ret>' -docstring 'vertical-selection'
+  } \
+  https://github.com/caksoylar/kakoune-focus %{
+    map global user <space> ': focus-toggle<ret>' -docstring 'focus selections'
+  } \
+  https://git.sr.ht/~raiguard/kak-live-grep %{} \
+  https://git.sr.ht/~raiguard/kak-mirror %{} \
+  https://git.sr.ht/~raiguard/kak-move-lines %{
+    map global normal <up>   ': move-lines-up %val{count}<ret>'
+    map global normal <down> ': move-lines-down %val{count}<ret>'
+  } \
+  https://github.com/kkga/foot.kak %{} \
+  https://github.com/JacobTravers/kakoune-grep-write %{} \
+  https://github.com/kkga/todo.kak %{} \
+  https://github.com/kkga/ui.kak %{
+    map global user u ': enter-user-mode -lock ui<ret>' -docstring 'UI..'
+    set-option global ui_whitespaces_flags -spc '·' -lf ' ' -tab '┊' -tabpad ' '
+    set-option global ui_line_numbers_flags -hlcursor -separator '│'
+    set-option global ui_wrap_flags -word -width 100
+    hook global WinCreate .* %{
+      ui-search-enable
+      ui-matching-enable
+      ui-todos-enable
+      ui-lint-enable
+      ui-git-diff-enable
+    }
+  }
+
+# bundle https://github.com/eraserhd/parinfer-rust %{
+#   cd ${kak_opt_bundle_path}/parinfer-rust
+#   cargo install --locked --force --path .
+# }
+# bundle-config parinfer-rust %{
+#   hook global WinSetOption filetype=(clojure|lisp|scheme|racket) %{
+#     parinfer-enable-window -smart
+#   }
+# }
+# bundle-load parinfer-rust
+
+set-option global startup_info_version 20200901
+set-option global autoreload yes
+set-option global grepcmd 'rg -Hn --no-heading --sort path --vimgrep'
+set-option -add global ui_options terminal_status_on_top=true
+set-option -add global ui_options terminal_set_title=off
+set-option -add global ui_options terminal_padding_char=,
+set-option -add global ui_options terminal_padding_fill=yes
+
+colorscheme saturn
+
+source "%val{config}/commands.kak"
+source "%val{config}/hooks.kak"
+source "%val{config}/lsp.kak"
+source "%val{config}/mappings.kak"
+source "%val{config}/modeline.kak"
+source "%val{config}/misc/wezterm.kak"
