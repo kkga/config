@@ -21,5 +21,3 @@ node_modules
 .sass-cache
 elm-stuff
 .npm
-
-~/dev/retool_development/.nvmrc
