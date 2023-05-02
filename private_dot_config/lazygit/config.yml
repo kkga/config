@@ -8,7 +8,6 @@ git:
     pager: delta --dark --wrap-max-lines 0 --file-style none --hunk-header-decoration-style none --paging=never
 
 os:
-  editCommand: "kks-edit"
   editCommandTemplate: "{{editor}} {{filename}} +{{line}}"
 
 gui:
