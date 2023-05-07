@@ -35,6 +35,25 @@ language-server = { command = "zk", args = [
 # language-server = { language-id = "svelte", command = "tailwindcss-language-server",args = ["--stdio"] }
 # config = { }
 
+
+[[language]]
+name = "typescript"
+shebangs = ["deno", "node"]
+roots = ["deno.json", "package.json", "tsconfig.json"]
+config = { enable = true, lint = true, unstable = true }
+language-server = { command = "deno", args = [
+  "lsp",
+], language-id = "typescript" }
+
+[[language]]
+name = "tsx"
+shebangs = ["deno", "node"]
+roots = ["deno.json", "package.json", "tsconfig.json"]
+config = { enable = true, lint = true, unstable = true }
+language-server = { command = "deno", args = [
+  "lsp",
+], language-id = "typescriptreact" }
+
 [[language]]
 name = "fish"
 formatter = { command = "fish_indent" }
