@@ -8,7 +8,10 @@ git:
     pager: delta --dark --wrap-max-lines 0 --file-style none --hunk-header-decoration-style none --paging=never
 
 os:
-  editPreset: "kakoune"
+  edit: 'hx {{filename}}'
+  editAtLine: 'hx --line={{line}} {{filename}}'
+  editAtLineAndWait: 'hx --block --line={{line}} {{filename}}'
+  editInTerminal: true
 
 gui:
   showBottomLine: false
