@@ -3,7 +3,7 @@ local act = wezterm.action
 
 return {
 	freetype_load_flags = "NO_HINTING",
-	font_size = 13.745,
+	font_size = 13.25,
 	font = wezterm.font({
 		family = "Berkeley Mono Variable",
 		-- weight = "Medium",
