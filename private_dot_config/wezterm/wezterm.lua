@@ -5,7 +5,7 @@ return {
 	freetype_load_flags = "NO_HINTING",
 	font_size = 13.745,
 	font = wezterm.font({
-		family = "MD IO 0.6",
+		family = "Berkeley Mono Variable",
 		-- weight = "Medium",
 		harfbuzz_features = { "dlig=1" },
 	}),
