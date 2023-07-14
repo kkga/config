@@ -3,9 +3,9 @@ local act = wezterm.action
 
 return {
 	freetype_load_flags = "NO_HINTING",
-	font_size = 13.25,
+	font_size = 13.745,
 	font = wezterm.font({
-		family = "Berkeley Mono Variable",
+		family = "MD IO 0.7",
 		-- weight = "Medium",
 		harfbuzz_features = { "dlig=1" },
 	}),
