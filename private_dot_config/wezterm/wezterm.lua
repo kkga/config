@@ -3,11 +3,10 @@ local act = wezterm.action
 
 return {
 	freetype_load_flags = "NO_HINTING",
-	font_size = 13.745,
+	font_size = 13.55,
 	font = wezterm.font({
-		family = "MD IO 0.7",
-		-- weight = "Medium",
-		harfbuzz_features = { "dlig=1" },
+		family = "CommitMono",
+		-- harfbuzz_features = { "dlig=0" },
 	}),
 	color_scheme = "saturn",
 	hide_tab_bar_if_only_one_tab = true,
