@@ -61,3 +61,5 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
