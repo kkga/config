@@ -3,8 +3,8 @@ local act = wezterm.action
 
 return {
 	-- freetype_load_flags = "NO_HINTING",
-	font_size = 13.55,
-	line_height = 1.15,
+	font_size = 13,
+	line_height = 1.2,
 	font = wezterm.font({
 		family = "CommitMono",
 		-- harfbuzz_features = { "dlig=0" },
