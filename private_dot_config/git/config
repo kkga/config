@@ -19,6 +19,7 @@
     amend = commit --amend
 [merge]
     conflictstyle = diff3
+	tool = vscode
 [diff]
     colorMoved = default
 	external = difft --tab-width 4
