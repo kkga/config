@@ -14,9 +14,9 @@ os:
   editInTerminal: true
 
 gui:
-  showBottomLine: false
-  showListFooter: false
-  showCommandLog: false
+  # showBottomLine: false
+  # showListFooter: false
+  # showCommandLog: false
   theme:
     selectedLineBgColor:
       - default
