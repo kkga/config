@@ -36,23 +36,23 @@ language-server = { command = "zk", args = [
 # config = { }
 
 
-[[language]]
-name = "typescript"
-shebangs = ["deno", "node"]
-roots = ["deno.json", "package.json", "tsconfig.json"]
-config = { enable = true, lint = true, unstable = true }
-language-server = { command = "deno", args = [
-  "lsp",
-], language-id = "typescript" }
+# [[language]]
+# name = "typescript"
+# shebangs = ["deno", "node"]
+# roots = ["deno.json", "package.json", "tsconfig.json"]
+# config = { enable = true, lint = true, unstable = true }
+# language-server = { command = "deno", args = [
+#   "lsp",
+# ], language-id = "typescript" }
 
-[[language]]
-name = "tsx"
-shebangs = ["deno", "node"]
-roots = ["deno.json", "package.json", "tsconfig.json"]
-config = { enable = true, lint = true, unstable = true }
-language-server = { command = "deno", args = [
-  "lsp",
-], language-id = "typescriptreact" }
+# [[language]]
+# name = "tsx"
+# shebangs = ["deno", "node"]
+# roots = ["deno.json", "package.json", "tsconfig.json"]
+# config = { enable = true, lint = true, unstable = true }
+# language-server = { command = "deno", args = [
+#   "lsp",
+# ], language-id = "typescriptreact" }
 
 [[language]]
 name = "fish"
@@ -62,24 +62,29 @@ auto-format = true
 [[language]]
 name = 'svelte'
 auto-format = true
+formatter = { command = 'prettier' }
 
 [[language]]
 name = "json"
 auto-format = true
-# formatter = { command = 'deno', args = ["fmt", "-", "--ext", "json" ] }
+formatter = { command = 'prettier' }
 
 [[language]]
 name = "javascript"
 auto-format = true
+formatter = { command = 'prettier' }
 
 [[language]]
 name = "jsx"
 auto-format = true
+formatter = { command = 'prettier' }
 
 [[language]]
 name = "typescript"
 auto-format = true
+formatter = { command = 'prettier' }
 
 [[language]]
 name = "tsx"
 auto-format = true
+formatter = { command = 'prettier' }
