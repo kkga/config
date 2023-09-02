@@ -1,15 +1,34 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
 
+-- wezterm.gui is not available to the mux server, so take care to
+-- do something reasonable when this config is evaluated by the mux
+local function get_appearance()
+	if wezterm.gui then
+		return wezterm.gui.get_appearance()
+	end
+	return 'Dark'
+end
+
+local function scheme_for_appearance(appearance)
+	if appearance:find 'Dark' then
+		return 'Builtin Solarized Dark'
+	else
+		return 'Builtin Solarized Light'
+	end
+end
+
 return {
-	-- freetype_load_flags = "NO_HINTING",
 	font_size = 13,
 	line_height = 1.2,
+	-- freetype_load_flags = "FORCE_AUTOHINT",
+	freetype_load_target = "Light",
 	font = wezterm.font({
 		family = "CommitMono",
-		-- harfbuzz_features = { "dlig=0" },
+		harfbuzz_features = { 'calt=1', 'clig=1', 'liga=1' }
 	}),
 	color_scheme = "saturn",
+	-- color_scheme = scheme_for_appearance(get_appearance()),
 	hide_tab_bar_if_only_one_tab = true,
 	use_fancy_tab_bar = false,
 	window_decorations = "RESIZE",
