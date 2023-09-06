@@ -5,7 +5,7 @@ skip_notify = true
 #assume_yes = true
 
 # Disable specific steps - same options as the command line flag
-disable = ["helm", "gem"]
+# disable = ["helm", "gem"]
 
 # Ignore failures for these steps
 # ignore_failures = ["node"]
