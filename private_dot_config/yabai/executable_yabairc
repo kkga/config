@@ -18,13 +18,9 @@ yabai -m config mouse_action1 move
 yabai -m config mouse_action2 resize
 
 yabai -m rule --add app="Spotify" display=last
-# yabai -m rule --add app="Brave Browser" space=1
-# yabai -m rule --add app="Figma" space=2
-# yabai -m rule --add app="Safari" space=3
-# yabai -m rule --add app="Mail" space=4
-# yabai -m rule --add app="wezterm-gui" space=4
 
 yabai -m rule --add app="Reminders" manage=off
+yabai -m rule --add app="Things" manage=off
 yabai -m rule --add app="Telegram" manage=off
 yabai -m rule --add app="Latest" manage=off
 yabai -m rule --add app="Pandan" manage=off
