@@ -76,7 +76,7 @@
 
                  ;; create and destroy spaces with alt+ctrl+-/=
                  [:!OTequal_sign [:yabai "space --create; /opt/homebrew/bin/yabai -m space --focus last"]]
-                 [:!OThyphen [:yabai "space --destroy"]]]}
+                 [:!OThyphen [:yabai "space --destroy; /opt/homebrew/bin/yabai -m space --focus last"]]]}
 
         {:des "non us tilde"
          :rules [[:##non_us_backslash :grave_accent_and_tilde]
