@@ -50,8 +50,11 @@ abbr cm chezmoi
 abbr notes "zk -W ~/notes e"
 abbr notes-retool "zk -W ~/retool-notes e"
 abbr e hx
-alias ls="exa --color=auto --group-directories-first -h"
-alias la="exa -alh"
+alias ls='lsd'
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
 alias cat="bat"
 alias lg="lazygit"
 alias cp="cp -iv"
