@@ -5,16 +5,23 @@ matches:
   - trigger: "@!"
     replace: "gadzhi.kha@gmail.com"
 
-  # Print the current date
   - trigger: ":date"
     replace: "{{mydate}}"
     vars:
       - name: mydate
         type: date
         params:
-          format: "%m/%d/%Y"
+          format: "%Y/%m/%d"
 
-  # Print the output of a shell command
+  - trigger: ":ddate"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%YYYY/%mm/%d"
+
+
   - trigger: ":shell"
     replace: "{{output}}"
     vars:
@@ -23,4 +30,3 @@ matches:
         params:
           cmd: "echo 'Hello from your shell'"
 
-  # And much more! For more information, visit the docs: https://espanso.org/docs/
