@@ -19,6 +19,7 @@ yabai -m config mouse_action2 resize
 
 yabai -m rule --add app="Spotify" display=last
 
+yabai -m rule --add app="1Password" manage=off
 yabai -m rule --add app="Reminders" manage=off
 yabai -m rule --add app="Things" manage=off
 yabai -m rule --add app="Telegram" manage=off
