@@ -39,7 +39,7 @@ cleanup = true
 
 [git]
 #max_concurrency = 5
-repos = ["~/.config/kak/bundle/plugins/*", "~/repos/*"]
+repos = ["~/repos/*"]
 
 # Don't pull the predefined git repos
 #predefined_repos = false
