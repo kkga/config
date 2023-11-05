@@ -22,7 +22,6 @@ yabai -m rule --add app="Spotify" display=last
 yabai -m rule --add app="1Password" manage=off
 yabai -m rule --add app="Reminders" manage=off
 yabai -m rule --add app="Things" manage=off
-yabai -m rule --add app="Telegram" manage=off
 yabai -m rule --add app="Latest" manage=off
 yabai -m rule --add app="Pandan" manage=off
 yabai -m rule --add app="CleanShot" manage=off
