@@ -49,13 +49,15 @@
                  [:!OTj [:yabai "window --focus stack.next || /opt/homebrew/bin/yabai -m window --focus next || /opt/homebrew/bin/yabai -m window --focus first"]]
                  [:!OTk [:yabai "window --focus stack.prev || /opt/homebrew/bin/yabai -m window --focus prev || /opt/homebrew/bin/yabai -m window --focus last"]]
 
-                 ;; window swap/shift
+                 ;; window swap/shift/layer
                  [:!OSf [:yabai "window --toggle zoom-fullscreen"]]
                  [:!OSj [:yabai "window --swap next || /opt/homebrew/bin/yabai -m window --grid 6:5:1:1:3:4"]]
                  [:!OSk [:yabai "window --swap prev || /opt/homebrew/bin/yabai -m window --grid 1:1:0:0:1:1"]]
                  [:!OSh [:yabai "window --grid 1:2:0:0:1:1"]]
                  [:!OSl [:yabai "window --grid 1:2:1:0:1:1"]]
                  [:!OSspacebar [:yabai "window --toggle float --grid 8:8:1:1:6:6"]]
+                 [:!OShyphen [:yabai "window --layer below"]]
+                 [:!OSequal_sign [:yabai "window --layer above"]]
 
                  ;; window resize
                  [:!OTh [:yabai "window --resize right:-80:0"]]
