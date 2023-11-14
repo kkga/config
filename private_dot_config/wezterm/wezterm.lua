@@ -22,7 +22,7 @@ return {
 	font_size = 13,
 	line_height = 1.2,
 	-- freetype_load_flags = "FORCE_AUTOHINT",
-	freetype_load_target = "Light",
+	-- freetype_load_target = "Light",
 	font = wezterm.font({
 		family = "CommitMono",
 		harfbuzz_features = { 'calt=1', 'clig=1', 'liga=1' }

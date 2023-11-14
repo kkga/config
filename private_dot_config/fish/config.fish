@@ -102,3 +102,6 @@ if status --is-interactive
     atuin init fish --disable-up-arrow | source
     fnm env --use-on-cd --version-file-strategy recursive | source
 end
+
+# opam configuration
+source /Users/kkga/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true

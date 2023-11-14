@@ -14,10 +14,8 @@ environment = { NO_COLOR = "1" }
 
 [language-server.deno-lsp.config.deno]
 enable = true
-# Uncomment to enable completion of unstable features of Deno
 unstable = true
-# Uncomment to cache dependencies on save
-# cacheOnSave = true
+cacheOnSave = true
 # Enable completion of importing from registries
 # Enable completion of function calls
 suggest = { completeFunctionCalls = false, imports = { hosts = { "https://deno.land" = true } } }
