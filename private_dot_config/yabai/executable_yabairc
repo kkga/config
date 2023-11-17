@@ -19,6 +19,7 @@ yabai -m config mouse_action2 resize
 yabai -m rule --add app="Spotify" display=last
 
 yabai -m rule --add app="1Password" manage=off
+yabai -m rule --add app="Telegram" manage=off
 yabai -m rule --add app="Reminders" manage=off
 yabai -m rule --add app="Things" manage=off
 yabai -m rule --add app="Latest" manage=off
@@ -44,3 +45,8 @@ yabai -m rule --add app="Mullvad VPN" manage=off
 yabai -m rule --add app="Mullvad VPN" sticky=on
 yabai -m rule --add app="Velja" manage=off
 yabai -m rule --add title="popup" manage=off
+
+# suggested fix for yabai 6.0 layer change
+# https://github.com/koekeishiya/yabai/issues/1912
+# Set all windows layer to normal
+yabai -m signal --add event=application_front_switched action="yabai -m window --layer normal"
