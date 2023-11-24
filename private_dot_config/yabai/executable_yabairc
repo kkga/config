@@ -26,7 +26,7 @@ yabai -m rule --add app="Latest" manage=off
 yabai -m rule --add app="Pandan" manage=off
 yabai -m rule --add app="CleanShot" manage=off
 yabai -m rule --add app="System Settings" manage=off
-yabai -m rule --add app="Iina" manage=off
+yabai -m rule --add app="IINA" manage=off
 yabai -m rule --add app="App Store" manage=off
 yabai -m rule --add app="Activity Monitor" manage=off
 yabai -m rule --add app="Preview" manage=off
