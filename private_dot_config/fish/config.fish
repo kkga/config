@@ -104,4 +104,4 @@ if status --is-interactive
 end
 
 # opam configuration
-source /Users/kkga/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
+# source /Users/kkga/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
