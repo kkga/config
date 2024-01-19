@@ -56,8 +56,8 @@
                  [:!OSh [:yabai "window --grid 1:2:0:0:1:1"]]
                  [:!OSl [:yabai "window --grid 1:2:1:0:1:1"]]
                  [:!OSspacebar [:yabai "window --toggle float --grid 8:8:1:1:6:6"]]
-                 [:!OShyphen [:yabai "window --layer below"]]
-                 [:!OSequal_sign [:yabai "window --layer above"]]
+                 ; [:!OShyphen [:yabai "window --layer below"]]
+                 ; [:!OSequal_sign [:yabai "window --layer above"]]
 
                  ;; window resize
                  [:!OTh [:yabai "window --resize right:-80:0"]]
@@ -77,8 +77,8 @@
                  [:!OScomma [:yabai "window --display prev; /opt/homebrew/bin/yabai -m display --focus prev"]]
 
                  ;; create and destroy spaces with alt+ctrl+-/=
-                 [:!OTequal_sign [:yabai "space --create; /opt/homebrew/bin/yabai -m space --focus last"]]
-                 [:!OThyphen [:yabai "space --destroy; /opt/homebrew/bin/yabai -m space --focus last"]]]}
+                 ; [:!OTequal_sign [:yabai "space --create; /opt/homebrew/bin/yabai -m space --focus last"]]
+                 ; [:!OThyphen [:yabai "space --destroy; /opt/homebrew/bin/yabai -m space --focus last"]]]}
 
         {:des "non us tilde"
          :rules [[:##non_us_backslash :grave_accent_and_tilde]

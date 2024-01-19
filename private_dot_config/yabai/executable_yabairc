@@ -9,9 +9,8 @@ yabai -m config layout float
 yabai -m config mouse_follows_focus off
 yabai -m config focus_follows_mouse off
 yabai -m config window_placement second_child
-# yabai -m config window_shadow float
-yabai -m config split_ratio 0.60
-yabai -m config auto_balance on
+yabai -m config split_ratio 0.66
+yabai -m config auto_balance off
 yabai -m config mouse_modifier ctrl
 yabai -m config mouse_action1 move
 yabai -m config mouse_action2 resize
@@ -43,6 +42,7 @@ yabai -m rule --add app="Fantastical" manage=off
 yabai -m rule --add app="Mullvad VPN" manage=off
 yabai -m rule --add app="Mullvad VPN" sticky=on
 yabai -m rule --add app="Velja" manage=off
+yabai -m rule --add app="Simulator" manage=off
 yabai -m rule --add title="popup" manage=off
 
 # suggested fix for yabai 6.0 layer change
