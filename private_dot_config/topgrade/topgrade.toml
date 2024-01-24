@@ -37,9 +37,9 @@ skip_notify = true
 # Cleanup temporary or old files
 cleanup = true
 
-[git]
+# [git]
 #max_concurrency = 5
-pull_only_repos = ["~/repos/*"]
+# pull_only_repos = ["~/repos/*"]
 
 # Don't pull the predefined git repos
 #predefined_repos = false
