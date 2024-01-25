@@ -19,16 +19,13 @@ local function scheme_for_appearance(appearance)
 end
 
 return {
-	font_size = 13,
-	-- line_height = 1.2,
-	-- freetype_load_flags = "FORCE_AUTOHINT",
-	-- freetype_load_target = "Light",
-	-- font = wezterm.font({
-		-- family = "CommitMono",
-		-- family = "Intel One Mono",
-		-- harfbuzz_features = { 'calt=1', 'clig=1', 'liga=1' }
-	-- }),
-	-- color_scheme = "Modus-Vivendi",
+	font_size = 13.58,
+	line_height = 1.2,
+	freetype_load_target = "Light",
+	font = wezterm.font({
+	 family = "CommitMono",
+	 harfbuzz_features = { 'calt=1', 'clig=1', 'liga=1' }
+	}),
 	color_scheme = scheme_for_appearance(get_appearance()),
 	hide_tab_bar_if_only_one_tab = true,
 	use_fancy_tab_bar = false,
