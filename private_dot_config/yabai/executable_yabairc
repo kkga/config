@@ -43,6 +43,7 @@ yabai -m rule --add app="Mullvad VPN" manage=off
 yabai -m rule --add app="Mullvad VPN" sticky=on
 yabai -m rule --add app="Velja" manage=off
 yabai -m rule --add app="Simulator" manage=off
+yabai -m rule --add app="AmneziaVPN" manage=off
 yabai -m rule --add title="popup" manage=off
 
 # suggested fix for yabai 6.0 layer change
