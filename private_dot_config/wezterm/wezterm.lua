@@ -14,18 +14,19 @@ local function scheme_for_appearance(appearance)
 	if appearance:find 'Dark' then
 		return 'Modus-Vivendi'
 	else
-		return 'Modus-Operandi'
+		return 'saturn'
+		-- return 'Modus-Vivendi'
+		-- return 'Modus-Operandi'
 	end
 end
 
 return {
 	font_size = 13,
-	-- line_height = 1.2,
-	freetype_load_flags = 'DEFAULT',
-	freetype_load_target = "Normal",
+	-- freetype_load_flags = 'DEFAULT',
+	-- freetype_load_target = "Normal",
 	font = wezterm.font({
-		family = 'Iosevka Comfy Wide Fixed',
-		-- family = "CommitMono",
+		-- family = 'Iosevka Comfy Wide Fixed',
+		family = "SF Mono",
 		-- harfbuzz_features = { 'calt=1', 'clig=1', 'liga=1' }
 	}),
 	color_scheme = scheme_for_appearance(get_appearance()),

@@ -5,7 +5,7 @@ git:
   showFileTree: false
   paging:
     colorArg: always
-    pager: delta --dark --wrap-max-lines 0 --file-style none --hunk-header-decoration-style none --paging=never
+    pager: delta --wrap-max-lines 0 --file-style none --hunk-header-decoration-style none --paging=never
 
 os:
   edit: 'hx {{filename}}'

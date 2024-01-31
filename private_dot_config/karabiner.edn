@@ -19,7 +19,7 @@
 :layers {}
 
 :simlayers {:nav-mode {:key :f}
-            :launch-mode {:key :w}}
+            :launch-mode {:key :g}}
 
 :templates {:run "$SHELL -c %s"
             :open "open \"%s\""
