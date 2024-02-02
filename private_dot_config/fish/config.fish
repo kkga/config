@@ -19,7 +19,7 @@ else if [ $OS = Darwin ]
     # set -gx CPPFLAGS -I/opt/homebrew/opt/openjdk/include
     set -gx KAKOUNE_POSIX_SHELL /opt/homebrew/bin/dash
     set -gx JAVA_HOME (/usr/libexec/java_home)
-    set -gx NODE_GYP_FORCE_PYTHON /opt/homebrew/bin/python2
+    # set -gx NODE_GYP_FORCE_PYTHON /opt/homebrew/bin/python2
 end
 
 # PATH
@@ -103,6 +103,3 @@ if status --is-interactive
     atuin init fish --disable-up-arrow | source
     fnm env --use-on-cd --version-file-strategy recursive | source
 end
-
-# opam configuration
-# source /Users/kkga/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
