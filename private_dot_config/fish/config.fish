@@ -100,6 +100,5 @@ if status --is-interactive
     bind \ej 'cd $(zoxide query -i); commandline -f repaint'
     zoxide init fish --cmd j | source
     direnv hook fish | source
-    atuin init fish --disable-up-arrow | source
     fnm env --use-on-cd --version-file-strategy recursive | source
 end

@@ -2,7 +2,6 @@ disableStartupPopups: false
 notARepository: "quit"
 
 git:
-  showFileTree: false
   paging:
     colorArg: always
     pager: delta --wrap-max-lines 0 --file-style none --hunk-header-decoration-style none --paging=never
@@ -14,9 +13,9 @@ os:
   editInTerminal: true
 
 gui:
-  # showBottomLine: false
-  # showListFooter: false
-  # showCommandLog: false
+  showBottomLine: false
+  showListFooter: false
+  showCommandLog: true
   theme:
     selectedLineBgColor:
       - default
@@ -25,3 +24,5 @@ gui:
     activeBorderColor:
       - green
       - bold
+    inactiveBorderColor:
+      - black 
