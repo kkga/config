@@ -22,7 +22,8 @@ gui:
     selectedRangeBgColor:
       - default
     activeBorderColor:
-      - green
+      - white
       - bold
     inactiveBorderColor:
-      - black 
+      - black
+      - bold 
