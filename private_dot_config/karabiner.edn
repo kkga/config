@@ -66,9 +66,6 @@
            [:!O4 [:yabai "space --focus 4"]]
            [:!O5 [:yabai "space --focus 5"]]
            [:!O6 [:yabai "space --focus 6"]]
-           [:!O7 [:yabai "space --focus 7"]]
-           [:!O8 [:yabai "space --focus 8"]]
-           [:!O9 [:yabai "space --focus 9"]]
            [:!Operiod [:yabai "display --focus next"]]
            [:!Ocomma [:yabai "display --focus prev"]]
 
