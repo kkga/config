@@ -1,10 +1,10 @@
 disableStartupPopups: false
 notARepository: "quit"
 
-git:
-  paging:
-    colorArg: always
-    pager: delta --wrap-max-lines 0 --file-style none --hunk-header-decoration-style none --paging=never
+# git:
+#   paging:
+#     colorArg: always
+#     pager: delta --wrap-max-lines 0 --file-style none --hunk-header-decoration-style none --paging=never
 
 os:
   edit: 'hx {{filename}}'
