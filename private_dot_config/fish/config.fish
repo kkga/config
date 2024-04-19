@@ -61,6 +61,8 @@ alias lg="lazygit"
 alias cp="cp -iv"
 alias mv="mv -iv"
 alias rm="rm -i"
+alias npm="pnpm"
+alias npx="pnpx"
 
 # COLORS
 
