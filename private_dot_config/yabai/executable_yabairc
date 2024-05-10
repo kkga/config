@@ -5,7 +5,7 @@ sudo yabai --load-sa
 
 yabai -m config window_gap 2
 
-yabai -m config layout float
+# yabai -m config layout float
 yabai -m config mouse_follows_focus off
 yabai -m config focus_follows_mouse off
 yabai -m config window_placement second_child
@@ -50,4 +50,5 @@ yabai -m rule --add title="popup" manage=off
 # suggested fix for yabai 6.0 layer change
 # https://github.com/koekeishiya/yabai/issues/1912
 # yabai -m rule --add app=".*" layer=normal
+yabai -m rule --add app=".*" sub-layer=normal
 # yabai -m signal --add event=application_front_switched action="yabai -m window --layer normal"
