@@ -1,103 +1,109 @@
-{
-;; code won't read cheatsheet section
+{;; code won't read cheatsheet section
 ;; ! stand for mandatory
 ;; # stand for optional
 ;; C T O S for left command control optional shift
 ;; F for fn
 ;; need to prefix C T O S F with ! or #
-:cheatsheet {:!Ca "command a" ;; mandatory left_command
-             :!Ta "control a" ;; mandatory left_control
-             :!Oa "option a"
-             :!Sa "shift a"
-             :#Sa "shift a" ;; keycode a, optional left_shift
-             :!CTOa "command control option a"
-             :!Cspacebar "command space"
-             :!Fa "fn a"
-             :##a "keycode a optional any"
-             :!!a "mandatory hyper(control command option shift) a "}
+ :cheatsheet {:!Ca "command a" ;; mandatory left_command
+              :!Ta "control a" ;; mandatory left_control
+              :!Oa "option a"
+              :!Sa "shift a"
+              :#Sa "shift a" ;; keycode a, optional left_shift
+              :!CTOa "command control option a"
+              :!Cspacebar "command space"
+              :!Fa "fn a"
+              :##a "keycode a optional any"
+              :!!a "mandatory hyper(control command option shift) a "}
 
-:layers {}
+ :layers {}
 
-:simlayers {:nav-mode {:key :f}
-            :launch-mode {:key :g}}
+ :simlayers {:nav-mode {:key :f}
+             :launch-mode {:key :g}}
 
-:templates {:run "$SHELL -c %s"
-            :open "open \"%s\""
-            :yabai "/opt/homebrew/bin/yabai -m %s"}
+ :templates {:run "$SHELL -c %s"
+             :open "open \"%s\""
+             :yabai "/opt/homebrew/bin/yabai -m %s"}
 
-:main [
-  {:des   "launch mode"
-   :rules [:launch-mode
-          [:t [:open "Applications/WezTerm.app"]]
-          [:c [:open "Applications/Safari.app"]]]}
+ :main [{:des   "launch mode"
+         :rules [:launch-mode
+                 [:t [:open "Applications/WezTerm.app"]]
+                 [:c [:open "Applications/Safari.app"]]]}
 
-  {:des   "caps_lock to esc when pressed alone, to ctrl as modifier"
-   :rules [[:##caps_lock :left_control nil {:alone :escape}]]}
+        {:des   "caps_lock to esc when pressed alone, to ctrl as modifier"
+         :rules [[:##caps_lock :left_control nil {:alone :escape}]]}
 
-  {:des   "globe/fn key in place of control for external keyboards"
-   :rules [[:left_control :fn]]}
+        {:des   "globe/fn key in place of control for external keyboards"
+         :rules [[:left_control :fn]]}
 
-  {:des   "nav mode: hold f - hjkl arrows, ; backspace, m return"
-   :rules [:nav-mode
-          [:##h :left_arrow]
-          [:##j :down_arrow]
-          [:##k :up_arrow]
-          [:##l :right_arrow]
-          [:##u :page_down]
-          [:##i :page_up]
-          [:##m :return_or_enter]
-          [:##semicolon :delete_or_backspace]]}
+        {:des   "nav mode: hold f - hjkl arrows, ; backspace, m return"
+         :rules [:nav-mode
+                 [:##h :left_arrow]
+                 [:##j :down_arrow]
+                 [:##k :up_arrow]
+                 [:##l :right_arrow]
+                 [:##u :page_down]
+                 [:##i :page_up]
+                 [:##m :return_or_enter]
+                 [:##semicolon :delete_or_backspace]]}
 
-  {:des   "non us tilde"
-   :rules [[:##non_us_backslash :grave_accent_and_tilde]
-           [:##grave_accent_and_tilde :!Tleft_shift]]}
+        {:des "punctuation"
+         :rules [[[:u :i] :!Ssemicolon]
+                 [[:i :o] :!Squote]
+                 [[:u :o] :equal_sign]
+                 [[:d :f] :!S9]
+                 [[:j :k] :!S0]
+                 [[:s :d] :open_bracket]
+                 [[:k :l] :close_bracket]
+                 [[:a :s] :!Sopen_bracket]
+                 [[:l :semicolon] :!Sclose_bracket]]}
 
-  {:des   "keyboard illumination with opt-f1/f2"
-   :rules [[:!Of1 :illumination_decrement]
-           [:!Of2 :illumination_increment]]}
+        {:des   "non us tilde"
+         :rules [[:##non_us_backslash :grave_accent_and_tilde]]}
 
-  {:des   "yabai"
-   :rules [[:!OTn [:yabai "space --focus next"]]
-           [:!OTp [:yabai "space --focus prev"]]
-           [:!Otab [:yabai "space --focus recent"]]
-           [:!O1 [:yabai "space --focus 1"]]
-           [:!O2 [:yabai "space --focus 2"]]
-           [:!O3 [:yabai "space --focus 3"]]
-           [:!O4 [:yabai "space --focus 4"]]
-           [:!O5 [:yabai "space --focus 5"]]
-           [:!O6 [:yabai "space --focus 6"]]
-           [:!Operiod [:yabai "display --focus next"]]
-           [:!Ocomma [:yabai "display --focus prev"]]
+        {:des   "keyboard illumination with opt-f1/f2"
+         :rules [[:!Of1 :illumination_decrement]
+                 [:!Of2 :illumination_increment]]}
 
-           [:!OTu [:yabai "space --layout bsp"]]
-           [:!OTi [:yabai "space --layout float"]]
-           [:!OTo [:yabai "space --layout stack"]]
-           [:!OTm [:yabai "space --mirror y-axis"]]
-           [:!OTdelete_or_backspace [:yabai "space --balance"]]
-           [:!OTf [:yabai "window --toggle zoom-fullscreen"]]
- 
-           [:!OTj [:yabai "window --focus stack.next || /opt/homebrew/bin/yabai -m window --focus next || /opt/homebrew/bin/yabai -m window --focus first"]]
-           [:!OTk [:yabai "window --focus stack.prev || /opt/homebrew/bin/yabai -m window --focus prev || /opt/homebrew/bin/yabai -m window --focus last"]]
+        {:des   "yabai"
+         :rules [[:!OTn [:yabai "space --focus next"]]
+                 [:!OTp [:yabai "space --focus prev"]]
+                 [:!Onon_us_backslash [:yabai "space --focus recent"]]
+                 [:!O1 [:yabai "space --focus 1"]]
+                 [:!O2 [:yabai "space --focus 2"]]
+                 [:!O3 [:yabai "space --focus 3"]]
+                 [:!O4 [:yabai "space --focus 4"]]
+                 [:!O5 [:yabai "space --focus 5"]]
+                 [:!O6 [:yabai "space --focus 6"]]
+                 [:!Operiod [:yabai "display --focus next"]]
+                 [:!Ocomma [:yabai "display --focus prev"]]
 
-           [:!OTh [:yabai "window --resize right:-80:0"]]
-           [:!OTl [:yabai "window --resize right:80:0"]]
- 
-           [:!OSj [:yabai "window --swap next || /opt/homebrew/bin/yabai -m window --grid 6:5:1:1:3:4"]]
-           [:!OSk [:yabai "window --swap prev || /opt/homebrew/bin/yabai -m window --grid 1:1:0:0:1:1"]]
-           [:!OSh [:yabai "window --grid 1:2:0:0:1:1"]]
-           [:!OSl [:yabai "window --grid 1:2:1:0:1:1"]]
-           [:!OSspacebar [:yabai "window --toggle float --grid 8:8:1:1:6:6"]]
-        
-           [:!OS1 [:yabai "window --space 1; /opt/homebrew/bin/yabai -m space --focus 1"]]
-           [:!OS2 [:yabai "window --space 2; /opt/homebrew/bin/yabai -m space --focus 2"]]
-           [:!OS3 [:yabai "window --space 3; /opt/homebrew/bin/yabai -m space --focus 3"]]
-           [:!OS4 [:yabai "window --space 4; /opt/homebrew/bin/yabai -m space --focus 4"]]
-           [:!OS5 [:yabai "window --space 5; /opt/homebrew/bin/yabai -m space --focus 5"]]
-           [:!OS6 [:yabai "window --space 6; /opt/homebrew/bin/yabai -m space --focus 6"]]
-           [:!OS7 [:yabai "window --space 7; /opt/homebrew/bin/yabai -m space --focus 7"]]
-           [:!OS8 [:yabai "window --space 8; /opt/homebrew/bin/yabai -m space --focus 8"]]
-           [:!OS9 [:yabai "window --space 9; /opt/homebrew/bin/yabai -m space --focus 9"]]
-           [:!OSperiod [:yabai "window --display next; /opt/homebrew/bin/yabai/ -m display --focus next"]]
-           [:!OScomma [:yabai "window --display prev; /opt/homebrew/bin/yabai -m display --focus prev"]]]}
-]
-}
+                 [:!OTu [:yabai "space --layout bsp"]]
+                 [:!OTi [:yabai "space --layout float"]]
+                 [:!OTo [:yabai "space --layout stack"]]
+                 [:!OTm [:yabai "space --mirror y-axis"]]
+                 [:!OTdelete_or_backspace [:yabai "space --balance"]]
+                 [:!OTf [:yabai "window --toggle zoom-fullscreen"]]
+
+                 [:!OTj [:yabai "window --focus stack.next || /opt/homebrew/bin/yabai -m window --focus next || /opt/homebrew/bin/yabai -m window --focus first"]]
+                 [:!OTk [:yabai "window --focus stack.prev || /opt/homebrew/bin/yabai -m window --focus prev || /opt/homebrew/bin/yabai -m window --focus last"]]
+
+                 [:!OTh [:yabai "window --resize right:-80:0"]]
+                 [:!OTl [:yabai "window --resize right:80:0"]]
+
+                 [:!OSj [:yabai "window --swap next || /opt/homebrew/bin/yabai -m window --grid 6:5:1:1:3:4"]]
+                 [:!OSk [:yabai "window --swap prev || /opt/homebrew/bin/yabai -m window --grid 1:1:0:0:1:1"]]
+                 [:!OSh [:yabai "window --grid 1:2:0:0:1:1"]]
+                 [:!OSl [:yabai "window --grid 1:2:1:0:1:1"]]
+                 [:!OSspacebar [:yabai "window --toggle float --grid 8:8:1:1:6:6"]]
+
+                 [:!OS1 [:yabai "window --space 1; /opt/homebrew/bin/yabai -m space --focus 1"]]
+                 [:!OS2 [:yabai "window --space 2; /opt/homebrew/bin/yabai -m space --focus 2"]]
+                 [:!OS3 [:yabai "window --space 3; /opt/homebrew/bin/yabai -m space --focus 3"]]
+                 [:!OS4 [:yabai "window --space 4; /opt/homebrew/bin/yabai -m space --focus 4"]]
+                 [:!OS5 [:yabai "window --space 5; /opt/homebrew/bin/yabai -m space --focus 5"]]
+                 [:!OS6 [:yabai "window --space 6; /opt/homebrew/bin/yabai -m space --focus 6"]]
+                 [:!OS7 [:yabai "window --space 7; /opt/homebrew/bin/yabai -m space --focus 7"]]
+                 [:!OS8 [:yabai "window --space 8; /opt/homebrew/bin/yabai -m space --focus 8"]]
+                 [:!OS9 [:yabai "window --space 9; /opt/homebrew/bin/yabai -m space --focus 9"]]
+                 [:!OSperiod [:yabai "window --display next; /opt/homebrew/bin/yabai/ -m display --focus next"]]
+                 [:!OScomma [:yabai "window --display prev; /opt/homebrew/bin/yabai -m display --focus prev"]]]}]}
