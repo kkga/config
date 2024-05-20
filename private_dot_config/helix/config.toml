@@ -2,8 +2,8 @@ theme = "dark_plus"
 
 [editor]
 cursorline = true
-# gutters = ["diagnostics", "spacer", "line-numbers", "spacer"]
-bufferline = "never"
+gutters = ["diff", "diagnostics", "spacer"]
+bufferline = "always"
 auto-format = true
 completion-trigger-len = 0
 idle-timeout = 0
@@ -49,6 +49,9 @@ display-messages = true
 insert = "bar"
 normal = "block"
 select = "underline"
+
+[editor.auto-pairs]
+'<' = '>'
 
 [keys.normal]
 ret = 'command_mode'

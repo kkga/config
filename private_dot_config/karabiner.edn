@@ -17,19 +17,13 @@
 
  :layers {}
 
- :simlayers {:nav-mode {:key :f}
-             :launch-mode {:key :g}}
+ :simlayers {:nav-mode {:key :f}}
 
  :templates {:run "$SHELL -c %s"
              :open "open \"%s\""
              :yabai "/opt/homebrew/bin/yabai -m %s"}
 
- :main [{:des   "launch mode"
-         :rules [:launch-mode
-                 [:t [:open "Applications/WezTerm.app"]]
-                 [:c [:open "Applications/Safari.app"]]]}
-
-        {:des   "caps_lock to esc when pressed alone, to ctrl as modifier"
+ :main [{:des   "caps_lock to esc when pressed alone, to ctrl as modifier"
          :rules [[:##caps_lock :left_control nil {:alone :escape}]]}
 
         {:des   "globe/fn key in place of control for external keyboards"
@@ -50,12 +44,13 @@
          :rules [[[:u :i] :!Ssemicolon]
                  [[:i :o] :!Squote]
                  [[:u :o] :equal_sign]
-                 [[:d :f] :!S9]
-                 [[:j :k] :!S0]
-                 [[:s :d] :open_bracket]
-                 [[:k :l] :close_bracket]
-                 [[:a :s] :!Sopen_bracket]
-                 [[:l :semicolon] :!Sclose_bracket]]}
+                ;;  [[:d :f] :!S9]
+                ;;  [[:j :k] :!S0]
+                ;;  [[:s :d] :open_bracket]
+                ;;  [[:k :l] :close_bracket]
+                ;;  [[:a :s] :!Sopen_bracket]
+                ;;  [[:l :semicolon] :!Sclose_bracket]
+                 ]}
 
         {:des   "non us tilde"
          :rules [[:##non_us_backslash :grave_accent_and_tilde]]}
