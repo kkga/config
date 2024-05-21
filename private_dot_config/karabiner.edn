@@ -62,7 +62,7 @@
         {:des   "yabai"
          :rules [[:!OTn [:yabai "space --focus next"]]
                  [:!OTp [:yabai "space --focus prev"]]
-                 [:!Onon_us_backslash [:yabai "space --focus recent"]]
+                 [:!Otab [:yabai "space --focus recent"]]
                  [:!O1 [:yabai "space --focus 1"]]
                  [:!O2 [:yabai "space --focus 2"]]
                  [:!O3 [:yabai "space --focus 3"]]
