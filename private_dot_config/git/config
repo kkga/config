@@ -35,8 +35,8 @@
     defaultBranch = master
 [format]
     pretty = '%C(yellow)%h%Creset %C(magenta)%cd%Creset %d %s'
-[credential]
-    helper = /usr/libexec/git-core/git-credential-libsecret
+# [credential]
+#     helper = /usr/libexec/git-core/git-credential-libsecret
 [fetch]
     prune = true
 [filter "lfs"]

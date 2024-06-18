@@ -15,8 +15,6 @@ local function scheme_for_appearance(appearance)
 		return 'saturn'
 	else
 		return 'saturn'
-		-- return 'Modus-Vivendi'
-		-- return 'Modus-Operandi'
 	end
 end
 
@@ -24,11 +22,12 @@ return {
 	font_size = 13,
 	line_height = 1.2,
 	-- freetype_load_flags = 'FORCE_AUTOHINT',
-	freetype_load_target = "Normal",
+	-- freetype_load_target = "Light",
+	-- freetype_render_target = 'HorizontalLcd',
 	font = wezterm.font({
 		family = "CommitMono",
-		harfbuzz_features = { 'calt=1', 'zero=1' }
 	}),
+	-- harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' },
 	color_scheme = scheme_for_appearance(get_appearance()),
 	hide_tab_bar_if_only_one_tab = true,
 	use_fancy_tab_bar = false,
@@ -36,6 +35,8 @@ return {
 	window_padding = { top = 0, bottom = 0, left = 0, right = 0 },
 	enable_kitty_keyboard = true,
 	enable_csi_u_key_encoding = true,
+	warn_about_missing_glyphs = true,
+	-- enable_scroll_bar = true,
 	keys = {
 		-- tabs
 		{ key = "j",      mods = "CMD",            action = act.ActivateTabRelative(1) },
