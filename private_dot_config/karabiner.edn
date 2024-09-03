@@ -44,7 +44,7 @@
          :rules [[[:u :i] :!Ssemicolon]
                  [[:i :o] :!Squote]
                  [[:u :o] :equal_sign]
-                ;;  [[:d :f] :!S9]
+                 ;;  [[:d :f] :!S9]
                 ;;  [[:j :k] :!S0]
                 ;;  [[:s :d] :open_bracket]
                 ;;  [[:k :l] :close_bracket]
