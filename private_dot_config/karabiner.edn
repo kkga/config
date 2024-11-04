@@ -52,8 +52,8 @@
                 ;;  [[:l :semicolon] :!Sclose_bracket]
                  ]}
 
-        {:des   "non us tilde"
-         :rules [[:##non_us_backslash :grave_accent_and_tilde]]}
+        ; {:des   "non us tilde"
+        ;  :rules [[:##non_us_backslash :grave_accent_and_tilde]]}
 
         {:des   "keyboard illumination with opt-f1/f2"
          :rules [[:!Of1 :illumination_decrement]
