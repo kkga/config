@@ -61,8 +61,8 @@ alias lg="lazygit"
 alias cp="cp -iv"
 alias mv="mv -iv"
 alias rm="rm -i"
-alias npm="pnpm"
-alias npx="pnpx"
+# alias npm="pnpm"
+# alias npx="pnpx"
 
 # COLORS
 
@@ -101,6 +101,6 @@ if status --is-interactive
     bind \co 'set old_tty (stty -g); stty sane; lfcd; stty $old_tty; commandline -f repaint'
     bind \ej 'cd $(zoxide query -i); commandline -f repaint'
     zoxide init fish --cmd j | source
-    # direnv hook fish | source
+    direnv hook fish | source
     fnm env --resolve-engines --corepack-enabled --use-on-cd --version-file-strategy recursive | source
 end
