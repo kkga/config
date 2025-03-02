@@ -20,12 +20,13 @@ end
 
 return {
 	font_size = 13,
-	line_height = 1.2,
+	-- line_height = 1.2,
 	-- freetype_load_flags = 'FORCE_AUTOHINT',
 	-- freetype_load_target = "Light",
 	-- freetype_render_target = 'HorizontalLcd',
 	font = wezterm.font({
-		family = "CommitMono",
+		-- family = "CommitMono",
+		family = "Berkeley Mono",
 	}),
 	-- harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' },
 	color_scheme = scheme_for_appearance(get_appearance()),
