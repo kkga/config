@@ -1,0 +1,148 @@
+{
+  "profiles" : [
+    {
+      "id" : "F9556E21-44DD-4DE0-B04C-4FAB3D8C0DD8",
+      "name" : "Default",
+      "workspaces" : [
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "us.zoom.xos",
+              "iconPath" : "/Applications/zoom.us.app/Contents/Resources/ZPLogo.icns",
+              "name" : "zoom.us"
+            },
+            {
+              "bundleIdentifier" : "com.google.Chrome",
+              "iconPath" : "/Applications/Google Chrome.app/Contents/Resources/app.icns",
+              "name" : "Google Chrome"
+            }
+          ],
+          "assignAppShortcut" : "opt+shift+1",
+          "display" : "Built-in Retina Display",
+          "id" : "4C468472-6861-4B43-B2F0-AEFB9DA15F94",
+          "name" : "Work",
+          "shortcut" : "opt+1",
+          "symbolIconName" : "person.3.fill"
+        },
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "com.figma.Desktop",
+              "iconPath" : "/Applications/Figma.app/Contents/Resources/electron.icns",
+              "name" : "Figma"
+            }
+          ],
+          "assignAppShortcut" : "opt+shift+2",
+          "display" : "Built-in Retina Display",
+          "id" : "C60A2820-B2BC-49BE-9AF0-D3B8211283DD",
+          "name" : "Design",
+          "shortcut" : "opt+2",
+          "symbolIconName" : "pencil.tip.crop.circle.fill"
+        },
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "com.apple.Safari",
+              "iconPath" : "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/Resources/AppIcon.icns",
+              "name" : "Safari"
+            }
+          ],
+          "assignAppShortcut" : "opt+shift+3",
+          "display" : "Built-in Retina Display",
+          "id" : "D945E931-841A-4857-B865-98B3AC8A57C9",
+          "name" : "Personal",
+          "shortcut" : "opt+3",
+          "symbolIconName" : "person.fill"
+        },
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "com.apple.Notes",
+              "iconPath" : "/System/Applications/Notes.app/Contents/Resources/AppIcon.icns",
+              "name" : "Notes"
+            },
+            {
+              "bundleIdentifier" : "com.mitchellh.ghostty",
+              "iconPath" : "/Applications/Ghostty.app/Contents/Resources/AppIcon.icns",
+              "name" : "Ghostty"
+            },
+            {
+              "bundleIdentifier" : "com.microsoft.VSCode",
+              "iconPath" : "/Applications/Visual Studio Code.app/Contents/Resources/Code.icns",
+              "name" : "Code"
+            }
+          ],
+          "assignAppShortcut" : "opt+shift+4",
+          "display" : "Built-in Retina Display",
+          "id" : "8AF2CAE5-F950-4ADD-9072-DDC341A23583",
+          "name" : "Utils",
+          "shortcut" : "opt+4",
+          "symbolIconName" : "apple.terminal.fill"
+        },
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "net.whatsapp.WhatsApp",
+              "iconPath" : "/Applications/WhatsApp.app/Contents/Resources/AppIconCatalystRelease.icns",
+              "name" : "‎WhatsApp"
+            },
+            {
+              "bundleIdentifier" : "ru.keepcoder.Telegram",
+              "iconPath" : "/Applications/Telegram.app/Contents/Resources/AppIcon.icns",
+              "name" : "Telegram"
+            },
+            {
+              "bundleIdentifier" : "com.openai.chat",
+              "iconPath" : "/Applications/ChatGPT.app/Contents/Resources/AppIcon.icns",
+              "name" : "ChatGPT"
+            }
+          ],
+          "assignAppShortcut" : "opt+shift+5",
+          "display" : "Built-in Retina Display",
+          "id" : "1584CBDD-F4C2-4EC0-8892-F66DF2427B99",
+          "name" : "Chats",
+          "shortcut" : "opt+5",
+          "symbolIconName" : "bubble.left.and.bubble.right.fill"
+        },
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "com.apple.finder",
+              "iconPath" : "/System/Library/CoreServices/Finder.app/Contents/Resources/Finder.icns",
+              "name" : "Finder"
+            },
+            {
+              "bundleIdentifier" : "org.m0k.transmission",
+              "iconPath" : "/Applications/Transmission.app/Contents/Resources/AppIcon.icns",
+              "name" : "Transmission"
+            },
+            {
+              "bundleIdentifier" : "org.mozilla.firefox",
+              "iconPath" : "/Applications/Firefox.app/Contents/Resources/firefox.icns",
+              "name" : "Firefox"
+            },
+            {
+              "bundleIdentifier" : "com.colliderli.iina",
+              "iconPath" : "/Applications/IINA.app/Contents/Resources/AppIcon.icns",
+              "name" : "IINA"
+            }
+          ],
+          "assignAppShortcut" : "opt+shift+0",
+          "display" : "Built-in Retina Display",
+          "id" : "02EF8117-E9D4-48C8-9EEC-62C7F5264202",
+          "name" : "Scratch",
+          "shortcut" : "opt+0",
+          "symbolIconName" : "square.dashed"
+        }
+      ]
+    },
+    {
+      "id" : "E7E7CDAD-83F3-4F4A-AE30-868699643454",
+      "name" : "Personal",
+      "workspaces" : [
+
+      ]
+    }
+  ],
+  "selectedProfileId" : "F9556E21-44DD-4DE0-B04C-4FAB3D8C0DD8"
+}
