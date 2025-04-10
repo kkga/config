@@ -1,0 +1,51 @@
+{
+  "alternativeDisplays" : "",
+  "centerCursorOnFocusChange" : false,
+  "centerCursorOnWorkspaceChange" : false,
+  "changeWorkspaceOnAppAssign" : true,
+  "checkForUpdatesAutomatically" : true,
+  "enableFocusManagement" : true,
+  "enableIntegrations" : false,
+  "enablePictureInPictureSupport" : true,
+  "enableSpaceControl" : true,
+  "enableSpaceControlAnimations" : false,
+  "enableSwipeGestures" : false,
+  "enableWorkspaceTransitions" : false,
+  "floatingApps" : [
+    {
+      "bundleIdentifier" : "com.apple.systempreferences",
+      "iconPath" : "/System/Applications/System Settings.app/Contents/Resources/PrefApp.icns",
+      "name" : "System Settings"
+    }
+  ],
+  "focusFrontmostWindow" : false,
+  "focusNextWorkspaceApp" : "ctrl+opt+n",
+  "focusPreviousWorkspaceApp" : "ctrl+opt+p",
+  "menuBarDisplayAliases" : "",
+  "menuBarTitleTemplate" : "$WORKSPACE",
+  "pipApps" : [
+
+  ],
+  "runScriptOnLaunch" : "",
+  "runScriptOnProfileChange" : "sketchybar --reload",
+  "runScriptOnWorkspaceChange" : "sketchybar --trigger flashspace_workspace_change WORKSPACE=\"$WORKSPACE\" DISPLAY=\"$DISPLAY\"",
+  "showFloatingNotifications" : true,
+  "showMenuBarTitle" : true,
+  "skipEmptyWorkspacesOnSwitch" : false,
+  "spaceControlCurrentDisplayWorkspaces" : true,
+  "spaceControlMaxColumns" : 4,
+  "swipeDown3FingerAction" : "none",
+  "swipeDown4FingerAction" : "none",
+  "swipeLeft3FingerAction" : "none",
+  "swipeLeft4FingerAction" : "none",
+  "swipeRight3FingerAction" : "none",
+  "swipeRight4FingerAction" : "none",
+  "swipeThreshold" : 0.2,
+  "swipeUp3FingerAction" : "none",
+  "swipeUp4FingerAction" : "none",
+  "switchToRecentWorkspace" : "opt+tab",
+  "toggleFocusedAppAssignment" : "opt+shift+enter",
+  "toggleTheFocusedAppFloating" : "opt+shift+space",
+  "workspaceTransitionDimming" : 0.2,
+  "workspaceTransitionDuration" : 0.5
+}
