@@ -19,7 +19,7 @@ else if [ $OS = Darwin ]
     # set -gx CPPFLAGS -I/opt/homebrew/opt/openjdk/include
     set -gx KAKOUNE_POSIX_SHELL /opt/homebrew/bin/dash
     set -gx JAVA_HOME (/usr/libexec/java_home)
-    set -gx NODE_GYP_FORCE_PYTHON /opt/homebrew/bin/python3.10
+    # set -gx NODE_GYP_FORCE_PYTHON /opt/homebrew/bin/python3.10
 end
 
 # PATH
