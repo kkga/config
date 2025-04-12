@@ -4,7 +4,7 @@
   "centerCursorOnWorkspaceChange" : false,
   "changeWorkspaceOnAppAssign" : true,
   "checkForUpdatesAutomatically" : true,
-  "enableFocusManagement" : true,
+  "enableFocusManagement" : false,
   "enableIntegrations" : false,
   "enablePictureInPictureSupport" : true,
   "enableSpaceControl" : true,
@@ -30,10 +30,11 @@
   "runScriptOnProfileChange" : "sketchybar --reload",
   "runScriptOnWorkspaceChange" : "sketchybar --trigger flashspace_workspace_change WORKSPACE=\"$WORKSPACE\" DISPLAY=\"$DISPLAY\"",
   "showFloatingNotifications" : true,
-  "showMenuBarTitle" : true,
+  "showMenuBarTitle" : false,
+  "showSpaceControl" : "cmd+`",
   "skipEmptyWorkspacesOnSwitch" : false,
   "spaceControlCurrentDisplayWorkspaces" : true,
-  "spaceControlMaxColumns" : 4,
+  "spaceControlMaxColumns" : 3,
   "swipeDown3FingerAction" : "none",
   "swipeDown4FingerAction" : "none",
   "swipeLeft3FingerAction" : "none",
@@ -46,6 +47,6 @@
   "switchToRecentWorkspace" : "opt+tab",
   "toggleFocusedAppAssignment" : "opt+shift+enter",
   "toggleTheFocusedAppFloating" : "opt+shift+space",
-  "workspaceTransitionDimming" : 0.2,
-  "workspaceTransitionDuration" : 0.5
+  "workspaceTransitionDimming" : 0.05,
+  "workspaceTransitionDuration" : 0.2
 }
