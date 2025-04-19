@@ -29,6 +29,7 @@
   "runScriptOnLaunch" : "",
   "runScriptOnProfileChange" : "sketchybar --reload",
   "runScriptOnWorkspaceChange" : "sketchybar --trigger flashspace_workspace_change WORKSPACE=\"$WORKSPACE\" DISPLAY=\"$DISPLAY\"",
+  "showFlashSpace" : "ctrl+opt+shift+delete",
   "showFloatingNotifications" : true,
   "showMenuBarTitle" : false,
   "showSpaceControl" : "cmd+`",

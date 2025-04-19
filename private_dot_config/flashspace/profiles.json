@@ -7,14 +7,14 @@
         {
           "apps" : [
             {
-              "bundleIdentifier" : "us.zoom.xos",
-              "iconPath" : "/Applications/zoom.us.app/Contents/Resources/ZPLogo.icns",
-              "name" : "zoom.us"
-            },
-            {
               "bundleIdentifier" : "com.google.Chrome",
               "iconPath" : "/Applications/Google Chrome.app/Contents/Resources/app.icns",
               "name" : "Google Chrome"
+            },
+            {
+              "bundleIdentifier" : "us.zoom.xos",
+              "iconPath" : "/Applications/zoom.us.app/Contents/Resources/ZPLogo.icns",
+              "name" : "zoom.us"
             }
           ],
           "assignAppShortcut" : "opt+shift+1",
@@ -107,11 +107,6 @@
         {
           "apps" : [
             {
-              "bundleIdentifier" : "com.apple.finder",
-              "iconPath" : "/System/Library/CoreServices/Finder.app/Contents/Resources/Finder.icns",
-              "name" : "Finder"
-            },
-            {
               "bundleIdentifier" : "org.m0k.transmission",
               "iconPath" : "/Applications/Transmission.app/Contents/Resources/AppIcon.icns",
               "name" : "Transmission"
@@ -125,6 +120,11 @@
               "bundleIdentifier" : "com.colliderli.iina",
               "iconPath" : "/Applications/IINA.app/Contents/Resources/AppIcon.icns",
               "name" : "IINA"
+            },
+            {
+              "bundleIdentifier" : "com.apple.reminders",
+              "iconPath" : "/System/Applications/Reminders.app/Contents/Resources/AppIcon.icns",
+              "name" : "Reminders"
             }
           ],
           "assignAppShortcut" : "opt+shift+0",
@@ -134,13 +134,6 @@
           "shortcut" : "opt+0",
           "symbolIconName" : "square.dashed"
         }
-      ]
-    },
-    {
-      "id" : "E7E7CDAD-83F3-4F4A-AE30-868699643454",
-      "name" : "Personal",
-      "workspaces" : [
-
       ]
     }
   ],
