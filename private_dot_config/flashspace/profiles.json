@@ -7,14 +7,14 @@
         {
           "apps" : [
             {
-              "bundleIdentifier" : "com.google.Chrome",
-              "iconPath" : "/Applications/Google Chrome.app/Contents/Resources/app.icns",
-              "name" : "Google Chrome"
-            },
-            {
               "bundleIdentifier" : "us.zoom.xos",
               "iconPath" : "/Applications/zoom.us.app/Contents/Resources/ZPLogo.icns",
               "name" : "zoom.us"
+            },
+            {
+              "bundleIdentifier" : "com.google.Chrome",
+              "iconPath" : "/Applications/Google Chrome.app/Contents/Resources/app.icns",
+              "name" : "Google Chrome"
             }
           ],
           "assignAppShortcut" : "opt+shift+1",
@@ -70,6 +70,11 @@
               "bundleIdentifier" : "com.microsoft.VSCode",
               "iconPath" : "/Applications/Visual Studio Code.app/Contents/Resources/Code.icns",
               "name" : "Code"
+            },
+            {
+              "bundleIdentifier" : "com.culturedcode.ThingsMac",
+              "iconPath" : "/Applications/Things3.app/Contents/Resources/App-Release.icns",
+              "name" : "Things"
             }
           ],
           "assignAppShortcut" : "opt+shift+4",
@@ -136,6 +141,5 @@
         }
       ]
     }
-  ],
-  "selectedProfileId" : "F9556E21-44DD-4DE0-B04C-4FAB3D8C0DD8"
+  ]
 }

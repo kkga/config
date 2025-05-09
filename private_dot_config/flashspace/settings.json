@@ -16,21 +16,30 @@
       "bundleIdentifier" : "com.apple.systempreferences",
       "iconPath" : "/System/Applications/System Settings.app/Contents/Resources/PrefApp.icns",
       "name" : "System Settings"
+    },
+    {
+      "bundleIdentifier" : "com.algoritmico.ios.Passepartout",
+      "iconPath" : "/Applications/Passepartout.app/Contents/Resources/AppIcon.icns",
+      "name" : "Passepartout"
     }
   ],
   "focusFrontmostWindow" : false,
   "focusNextWorkspaceApp" : "ctrl+opt+n",
   "focusPreviousWorkspaceApp" : "ctrl+opt+p",
+  "keepUnassignedAppsOnSwitch" : false,
   "menuBarDisplayAliases" : "",
   "menuBarTitleTemplate" : "$WORKSPACE",
   "pipApps" : [
 
   ],
+  "pipScreenCornerOffset" : 15,
+  "restoreHiddenAppsOnSwitch" : true,
   "runScriptOnLaunch" : "",
   "runScriptOnProfileChange" : "sketchybar --reload",
   "runScriptOnWorkspaceChange" : "sketchybar --trigger flashspace_workspace_change WORKSPACE=\"$WORKSPACE\" DISPLAY=\"$DISPLAY\"",
   "showFlashSpace" : "ctrl+opt+shift+delete",
   "showFloatingNotifications" : true,
+  "showMenuBarIcon" : true,
   "showMenuBarTitle" : false,
   "showSpaceControl" : "cmd+`",
   "skipEmptyWorkspacesOnSwitch" : false,
@@ -48,6 +57,6 @@
   "switchToRecentWorkspace" : "opt+tab",
   "toggleFocusedAppAssignment" : "opt+shift+enter",
   "toggleTheFocusedAppFloating" : "opt+shift+space",
-  "workspaceTransitionDimming" : 0.05,
-  "workspaceTransitionDuration" : 0.2
+  "workspaceTransitionDimming" : 0.15000000000000002,
+  "workspaceTransitionDuration" : 0.1
 }
