@@ -7,14 +7,14 @@
         {
           "apps" : [
             {
-              "bundleIdentifier" : "us.zoom.xos",
-              "iconPath" : "/Applications/zoom.us.app/Contents/Resources/ZPLogo.icns",
-              "name" : "zoom.us"
-            },
-            {
               "bundleIdentifier" : "com.google.Chrome",
               "iconPath" : "/Applications/Google Chrome.app/Contents/Resources/app.icns",
               "name" : "Google Chrome"
+            },
+            {
+              "bundleIdentifier" : "com.microsoft.VSCode",
+              "iconPath" : "/Applications/Visual Studio Code.app/Contents/Resources/Code.icns",
+              "name" : "Code"
             }
           ],
           "assignAppShortcut" : "opt+shift+1",
@@ -30,6 +30,11 @@
               "bundleIdentifier" : "com.figma.Desktop",
               "iconPath" : "/Applications/Figma.app/Contents/Resources/electron.icns",
               "name" : "Figma"
+            },
+            {
+              "bundleIdentifier" : "us.zoom.xos",
+              "iconPath" : "/Applications/zoom.us.app/Contents/Resources/ZPLogo.icns",
+              "name" : "zoom.us"
             }
           ],
           "assignAppShortcut" : "opt+shift+2",
@@ -65,11 +70,6 @@
               "bundleIdentifier" : "com.mitchellh.ghostty",
               "iconPath" : "/Applications/Ghostty.app/Contents/Resources/AppIcon.icns",
               "name" : "Ghostty"
-            },
-            {
-              "bundleIdentifier" : "com.microsoft.VSCode",
-              "iconPath" : "/Applications/Visual Studio Code.app/Contents/Resources/Code.icns",
-              "name" : "Code"
             },
             {
               "bundleIdentifier" : "com.culturedcode.ThingsMac",
