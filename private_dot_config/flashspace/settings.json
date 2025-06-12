@@ -21,6 +21,11 @@
       "bundleIdentifier" : "com.algoritmico.ios.Passepartout",
       "iconPath" : "/Applications/Passepartout.app/Contents/Resources/AppIcon.icns",
       "name" : "Passepartout"
+    },
+    {
+      "bundleIdentifier" : "com.wireguard.macos",
+      "iconPath" : "/Applications/WireGuard.app/Contents/Resources/AppIcon.icns",
+      "name" : "WireGuard"
     }
   ],
   "focusFrontmostWindow" : false,
@@ -41,7 +46,7 @@
   "showFloatingNotifications" : true,
   "showMenuBarIcon" : true,
   "showMenuBarTitle" : false,
-  "showSpaceControl" : "cmd+`",
+  "showSpaceControl" : "opt+`",
   "skipEmptyWorkspacesOnSwitch" : false,
   "spaceControlCurrentDisplayWorkspaces" : true,
   "spaceControlMaxColumns" : 3,

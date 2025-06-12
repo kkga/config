@@ -135,6 +135,11 @@
               "bundleIdentifier" : "com.apple.reminders",
               "iconPath" : "/System/Applications/Reminders.app/Contents/Resources/AppIcon.icns",
               "name" : "Reminders"
+            },
+            {
+              "bundleIdentifier" : "com.zwift.ZwiftLauncher",
+              "iconPath" : "/Applications/Zwift.app/Contents/Resources/AppIcon.icns",
+              "name" : "Zwift"
             }
           ],
           "assignAppShortcut" : "opt+shift+0",
