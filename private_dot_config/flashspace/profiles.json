@@ -7,14 +7,14 @@
         {
           "apps" : [
             {
-              "bundleIdentifier" : "com.google.Chrome",
-              "iconPath" : "/Applications/Google Chrome.app/Contents/Resources/app.icns",
-              "name" : "Google Chrome"
-            },
-            {
               "bundleIdentifier" : "us.zoom.xos",
               "iconPath" : "/Applications/zoom.us.app/Contents/Resources/ZPLogo.icns",
               "name" : "zoom.us"
+            },
+            {
+              "bundleIdentifier" : "com.google.Chrome",
+              "iconPath" : "/Applications/Google Chrome.app/Contents/Resources/app.icns",
+              "name" : "Google Chrome"
             }
           ],
           "assignAppShortcut" : "opt+shift+1",
