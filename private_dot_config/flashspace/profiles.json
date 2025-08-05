@@ -140,13 +140,23 @@
               "bundleIdentifier" : "com.zwift.ZwiftLauncher",
               "iconPath" : "/Applications/Zwift.app/Contents/Resources/AppIcon.icns",
               "name" : "Zwift"
+            },
+            {
+              "bundleIdentifier" : "com.apple.finder",
+              "iconPath" : "/System/Library/CoreServices/Finder.app/Contents/Resources/Finder.icns",
+              "name" : "Finder"
+            },
+            {
+              "bundleIdentifier" : "com.apple.Stickies",
+              "iconPath" : "/System/Applications/Stickies.app/Contents/Resources/AppIcon.icns",
+              "name" : "Stickies"
             }
           ],
-          "assignAppShortcut" : "opt+shift+0",
+          "assignAppShortcut" : "opt+shift+`",
           "display" : "Built-in Retina Display",
           "id" : "02EF8117-E9D4-48C8-9EEC-62C7F5264202",
           "name" : "Scratch",
-          "shortcut" : "opt+0",
+          "shortcut" : "opt+`",
           "symbolIconName" : "square.dashed"
         }
       ]
