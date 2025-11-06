@@ -1,16 +1,10 @@
 disableStartupPopups: false
 notARepository: "quit"
 
-# git:
-#   paging:
-#     colorArg: always
-#     pager: delta --wrap-max-lines 0 --file-style none --hunk-header-decoration-style none --paging=never
-
 os:
-  edit: 'hx {{filename}}'
-  editAtLine: 'hx --line={{line}} {{filename}}'
-  editAtLineAndWait: 'hx --block --line={{line}} {{filename}}'
-  editInTerminal: true
+  editPreset: "vscode"
+
+promptToReturnFromSubprocess: false # removes "press enter to return to lazygit" popup
 
 gui:
   showBottomLine: false
@@ -26,4 +20,4 @@ gui:
       - bold
     inactiveBorderColor:
       - black
-      - bold 
+      - bold

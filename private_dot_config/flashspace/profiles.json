@@ -7,22 +7,23 @@
         {
           "apps" : [
             {
-              "bundleIdentifier" : "us.zoom.xos",
-              "iconPath" : "/Applications/zoom.us.app/Contents/Resources/ZPLogo.icns",
-              "name" : "zoom.us"
-            },
-            {
               "bundleIdentifier" : "com.google.Chrome",
               "iconPath" : "/Applications/Google Chrome.app/Contents/Resources/app.icns",
               "name" : "Google Chrome"
+            },
+            {
+              "bundleIdentifier" : "com.apple.Safari",
+              "iconPath" : "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/Resources/AppIcon.icns",
+              "name" : "Safari"
             }
           ],
           "assignAppShortcut" : "opt+shift+1",
           "display" : "Built-in Retina Display",
           "id" : "4C468472-6861-4B43-B2F0-AEFB9DA15F94",
-          "name" : "Work",
+          "name" : "Browser",
+          "openAppsOnActivation" : false,
           "shortcut" : "opt+1",
-          "symbolIconName" : "person.3.fill"
+          "symbolIconName" : "safari.fill"
         },
         {
           "apps" : [
@@ -35,42 +36,13 @@
           "assignAppShortcut" : "opt+shift+2",
           "display" : "Built-in Retina Display",
           "id" : "C60A2820-B2BC-49BE-9AF0-D3B8211283DD",
-          "name" : "Design",
+          "name" : "Code",
+          "openAppsOnActivation" : false,
           "shortcut" : "opt+2",
-          "symbolIconName" : "pencil.tip.crop.circle.fill"
+          "symbolIconName" : "curlybraces"
         },
         {
           "apps" : [
-            {
-              "bundleIdentifier" : "com.apple.Safari",
-              "iconPath" : "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/Resources/AppIcon.icns",
-              "name" : "Safari"
-            }
-          ],
-          "assignAppShortcut" : "opt+shift+3",
-          "display" : "Built-in Retina Display",
-          "id" : "D945E931-841A-4857-B865-98B3AC8A57C9",
-          "name" : "Personal",
-          "shortcut" : "opt+3",
-          "symbolIconName" : "person.fill"
-        },
-        {
-          "apps" : [
-            {
-              "bundleIdentifier" : "com.apple.Notes",
-              "iconPath" : "/System/Applications/Notes.app/Contents/Resources/AppIcon.icns",
-              "name" : "Notes"
-            },
-            {
-              "bundleIdentifier" : "com.mitchellh.ghostty",
-              "iconPath" : "/Applications/Ghostty.app/Contents/Resources/AppIcon.icns",
-              "name" : "Ghostty"
-            },
-            {
-              "bundleIdentifier" : "com.culturedcode.ThingsMac",
-              "iconPath" : "/Applications/Things3.app/Contents/Resources/App-Release.icns",
-              "name" : "Things"
-            },
             {
               "bundleIdentifier" : "com.google.Chrome.beta",
               "iconPath" : "/Applications/Google Chrome Beta.app/Contents/Resources/app.icns",
@@ -82,10 +54,32 @@
               "name" : "Code"
             }
           ],
+          "assignAppShortcut" : "opt+shift+3",
+          "display" : "Built-in Retina Display",
+          "id" : "D945E931-841A-4857-B865-98B3AC8A57C9",
+          "name" : "Code 2",
+          "openAppsOnActivation" : false,
+          "shortcut" : "opt+3",
+          "symbolIconName" : "eye.fill"
+        },
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "com.culturedcode.ThingsMac",
+              "iconPath" : "/Applications/Things3.app/Contents/Resources/App-Release.icns",
+              "name" : "Things"
+            },
+            {
+              "bundleIdentifier" : "com.mitchellh.ghostty",
+              "iconPath" : "/Applications/Ghostty.app/Contents/Resources/Ghostty.icns",
+              "name" : "Ghostty"
+            }
+          ],
           "assignAppShortcut" : "opt+shift+4",
           "display" : "Built-in Retina Display",
           "id" : "8AF2CAE5-F950-4ADD-9072-DDC341A23583",
           "name" : "Utils",
+          "openAppsOnActivation" : false,
           "shortcut" : "opt+4",
           "symbolIconName" : "apple.terminal.fill"
         },
@@ -102,9 +96,9 @@
               "name" : "Telegram"
             },
             {
-              "bundleIdentifier" : "com.openai.chat",
-              "iconPath" : "/Applications/ChatGPT.app/Contents/Resources/AppIcon.icns",
-              "name" : "ChatGPT"
+              "bundleIdentifier" : "com.apple.Notes",
+              "iconPath" : "/System/Applications/Notes.app/Contents/Resources/AppIcon.icns",
+              "name" : "Notes"
             }
           ],
           "assignAppShortcut" : "opt+shift+5",

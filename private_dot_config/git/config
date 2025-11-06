@@ -3,7 +3,7 @@
 	email = me@kkga.me
 [core]
     editor = hx
-	pager = diff-so-fancy | less --tabs=4 -RFX
+	pager = diff-so-fancy
 [alias]
     a = add
     c = commit
