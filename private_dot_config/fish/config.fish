@@ -1,8 +1,6 @@
 # VARIABLES
 
-set -gx OS (uname -s)
 set -gx DENO_INSTALL $HOME/.deno
-set -gx BUN_INSTALL $HOME/.bun
 set -gx PNPM_HOME /Users/kkga/Library/pnpm
 set -gx FZF_DEFAULT_COMMAND 'fd --type=file'
 set -gx FZF_DEFAULT_OPTS '--layout=reverse --height=50% --preview-window=bottom:50%,border-top --inline-info --color=prompt:3,header:7,info:7,pointer:14:bold,marker:4,hl:4,hl+:12:,fg+:15,bg+:235'
@@ -13,12 +11,11 @@ set -gx BAT_STYLE plain
 
 # PATH
 
-fish_add_path /opt/homebrew/bin \
+fish_add_path \
+    /opt/homebrew/bin \
     /opt/homebrew/sbin \
     "$HOME/.yarn/bin" \
     "$DENO_INSTALL/bin" \
-    "$BUN_INSTALL/bin" \
-    "$HOME/.cargo/bin" \
     "$PNPM_HOME"
 fish_add_path -m "$HOME/.local/bin"
 
@@ -40,9 +37,6 @@ alias cat="bat"
 alias lg="lazygit"
 alias cp="cp -iv"
 alias mv="mv -iv"
-# alias rm="rm -i"
-# alias npm="pnpm"
-# alias npx="pnpx"
 
 # COLORS
 
