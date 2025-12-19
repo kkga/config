@@ -7,11 +7,6 @@
         {
           "apps" : [
             {
-              "bundleIdentifier" : "com.google.Chrome",
-              "iconPath" : "/Applications/Google Chrome.app/Contents/Resources/app.icns",
-              "name" : "Google Chrome"
-            },
-            {
               "bundleIdentifier" : "com.apple.Safari",
               "iconPath" : "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/Resources/AppIcon.icns",
               "name" : "Safari"
@@ -31,15 +26,19 @@
               "bundleIdentifier" : "com.figma.Desktop",
               "iconPath" : "/Applications/Figma.app/Contents/Resources/electron.icns",
               "name" : "Figma"
+            },
+            {
+              "bundleIdentifier" : "com.google.Chrome",
+              "iconPath" : "/Applications/Google Chrome.app/Contents/Resources/app.icns",
+              "name" : "Google Chrome"
             }
           ],
           "assignAppShortcut" : "opt+shift+2",
           "display" : "Built-in Retina Display",
           "id" : "C60A2820-B2BC-49BE-9AF0-D3B8211283DD",
-          "name" : "Code",
+          "name" : "Code Br",
           "openAppsOnActivation" : false,
-          "shortcut" : "opt+2",
-          "symbolIconName" : "curlybraces"
+          "shortcut" : "opt+2"
         },
         {
           "apps" : [
@@ -52,15 +51,20 @@
               "bundleIdentifier" : "com.microsoft.VSCode",
               "iconPath" : "/Applications/Visual Studio Code.app/Contents/Resources/Code.icns",
               "name" : "Code"
+            },
+            {
+              "bundleIdentifier" : "com.apple.dt.Xcode",
+              "iconPath" : "/Applications/Xcode.app/Contents/Resources/Xcode.icns",
+              "name" : "Xcode"
             }
           ],
           "assignAppShortcut" : "opt+shift+3",
           "display" : "Built-in Retina Display",
           "id" : "D945E931-841A-4857-B865-98B3AC8A57C9",
-          "name" : "Code 2",
+          "name" : "Code Ed",
           "openAppsOnActivation" : false,
           "shortcut" : "opt+3",
-          "symbolIconName" : "eye.fill"
+          "symbolIconName" : "curlybraces.square.fill"
         },
         {
           "apps" : [
@@ -94,11 +98,6 @@
               "bundleIdentifier" : "ru.keepcoder.Telegram",
               "iconPath" : "/Applications/Telegram.app/Contents/Resources/AppIcon.icns",
               "name" : "Telegram"
-            },
-            {
-              "bundleIdentifier" : "com.apple.Notes",
-              "iconPath" : "/System/Applications/Notes.app/Contents/Resources/AppIcon.icns",
-              "name" : "Notes"
             }
           ],
           "assignAppShortcut" : "opt+shift+5",
@@ -144,6 +143,11 @@
               "bundleIdentifier" : "com.apple.Stickies",
               "iconPath" : "/System/Applications/Stickies.app/Contents/Resources/AppIcon.icns",
               "name" : "Stickies"
+            },
+            {
+              "bundleIdentifier" : "com.apple.Notes",
+              "iconPath" : "/System/Applications/Notes.app/Contents/Resources/AppIcon.icns",
+              "name" : "Notes"
             }
           ],
           "assignAppShortcut" : "opt+shift+`",
