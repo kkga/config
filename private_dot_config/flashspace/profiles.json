@@ -69,11 +69,6 @@
         {
           "apps" : [
             {
-              "bundleIdentifier" : "com.culturedcode.ThingsMac",
-              "iconPath" : "/Applications/Things3.app/Contents/Resources/App-Release.icns",
-              "name" : "Things"
-            },
-            {
               "bundleIdentifier" : "com.mitchellh.ghostty",
               "iconPath" : "/Applications/Ghostty.app/Contents/Resources/Ghostty.icns",
               "name" : "Ghostty"
