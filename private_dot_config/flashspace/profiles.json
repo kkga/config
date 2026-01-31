@@ -26,11 +26,6 @@
               "bundleIdentifier" : "com.figma.Desktop",
               "iconPath" : "/Applications/Figma.app/Contents/Resources/electron.icns",
               "name" : "Figma"
-            },
-            {
-              "bundleIdentifier" : "com.google.Chrome",
-              "iconPath" : "/Applications/Google Chrome.app/Contents/Resources/app.icns",
-              "name" : "Google Chrome"
             }
           ],
           "assignAppShortcut" : "opt+shift+2",
@@ -56,6 +51,11 @@
               "bundleIdentifier" : "com.apple.dt.Xcode",
               "iconPath" : "/Applications/Xcode.app/Contents/Resources/Xcode.icns",
               "name" : "Xcode"
+            },
+            {
+              "bundleIdentifier" : "com.google.Chrome",
+              "iconPath" : "/Applications/Google Chrome.app/Contents/Resources/app.icns",
+              "name" : "Google Chrome"
             }
           ],
           "assignAppShortcut" : "opt+shift+3",

@@ -9,7 +9,7 @@
   "enableFocusManagement" : true,
   "enableIntegrations" : false,
   "enablePictureInPictureSupport" : true,
-  "enableSpaceControl" : true,
+  "enableSpaceControl" : false,
   "enableSpaceControlAnimations" : false,
   "enableSpaceControlTilesAnimations" : false,
   "enableSwipeGestures" : false,
