@@ -12,7 +12,7 @@
   "enableSpaceControl" : false,
   "enableSpaceControlAnimations" : false,
   "enableSpaceControlTilesAnimations" : false,
-  "enableSwipeGestures" : false,
+  "enableSwipeGestures" : true,
   "enableWorkspaceTransitions" : false,
   "floatingApps" : [
     {

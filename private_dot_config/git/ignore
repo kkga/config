@@ -21,3 +21,5 @@ node_modules
 .sass-cache
 elm-stuff
 .npm
+
+**/.claude/settings.local.json

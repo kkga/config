@@ -16,7 +16,8 @@ fish_add_path \
     /opt/homebrew/sbin \
     "$HOME/.yarn/bin" \
     "$DENO_INSTALL/bin" \
-    "$PNPM_HOME"
+    "$PNPM_HOME" \
+    "$HOME/Library/Application Support/sand"
 fish_add_path -m "$HOME/.local/bin"
 
 # ABBREVIATIONS

@@ -26,6 +26,11 @@
               "bundleIdentifier" : "com.figma.Desktop",
               "iconPath" : "/Applications/Figma.app/Contents/Resources/electron.icns",
               "name" : "Figma"
+            },
+            {
+              "bundleIdentifier" : "com.google.Chrome",
+              "iconPath" : "/Applications/Google Chrome.app/Contents/Resources/app.icns",
+              "name" : "Google Chrome"
             }
           ],
           "assignAppShortcut" : "opt+shift+2",
@@ -53,9 +58,9 @@
               "name" : "Xcode"
             },
             {
-              "bundleIdentifier" : "com.google.Chrome",
-              "iconPath" : "/Applications/Google Chrome.app/Contents/Resources/app.icns",
-              "name" : "Google Chrome"
+              "bundleIdentifier" : "com.mitchellh.ghostty",
+              "iconPath" : "/Applications/Ghostty.app/Contents/Resources/Ghostty.icns",
+              "name" : "Ghostty"
             }
           ],
           "assignAppShortcut" : "opt+shift+3",
@@ -68,11 +73,7 @@
         },
         {
           "apps" : [
-            {
-              "bundleIdentifier" : "com.mitchellh.ghostty",
-              "iconPath" : "/Applications/Ghostty.app/Contents/Resources/Ghostty.icns",
-              "name" : "Ghostty"
-            }
+
           ],
           "assignAppShortcut" : "opt+shift+4",
           "display" : "Built-in Retina Display",
@@ -143,6 +144,11 @@
               "bundleIdentifier" : "com.apple.Notes",
               "iconPath" : "/System/Applications/Notes.app/Contents/Resources/AppIcon.icns",
               "name" : "Notes"
+            },
+            {
+              "bundleIdentifier" : "com.apple.iCal",
+              "iconPath" : "/System/Applications/Calendar.app/Contents/Resources/AppIcon.icns",
+              "name" : "Calendar"
             }
           ],
           "assignAppShortcut" : "opt+shift+`",
