@@ -1,0 +1,25 @@
+{
+	"$schema": "https://opencode.ai/config.json",
+	"plugin": ["opencode-gemini-auth@latest"],
+	"mcp": {
+		"xcode": {
+			"type": "local",
+			"command": ["xcrun", "mcpbridge"],
+			"enabled": true
+		},
+		"github": {
+			"type": "remote",
+			"url": "https://api.githubcopilot.com/mcp",
+			"enabled": true,
+			"headers": {
+				"Authorization": "Bearer {env:GITHUB_PAT}"
+			}
+		}
+	},
+	"formatter": {
+		"swift-format": {
+			"command": ["swift", "format", "format", "--in-place", "$FILE"],
+			"extensions": [".swift"]
+		}
+	}
+}
