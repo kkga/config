@@ -17,7 +17,8 @@ fish_add_path \
     "$HOME/.yarn/bin" \
     "$DENO_INSTALL/bin" \
     "$PNPM_HOME" \
-    "$HOME/Library/Application Support/sand"
+    "$HOME/Library/Application Support/sand" \
+    "$HOME/.opencode/bin"
 fish_add_path -m "$HOME/.local/bin"
 
 # ABBREVIATIONS
@@ -78,3 +79,5 @@ if status --is-interactive
     zoxide init fish --cmd j | source
     direnv hook fish | source
 end
+
+# opencode
