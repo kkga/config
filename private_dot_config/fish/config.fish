@@ -8,6 +8,7 @@ set -gx EDITOR hx
 set -gx VISUAL code
 set -gx BAT_THEME ansi
 set -gx BAT_STYLE plain
+set -gx ANTHROPIC_API_KEY (security find-generic-password -s "ANTHROPIC_API_KEY" -w)
 
 # PATH
 

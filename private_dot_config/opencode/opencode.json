@@ -7,6 +7,11 @@
 			"command": ["xcrun", "mcpbridge"],
 			"enabled": true
 		},
+		"XcodeBuildMCP": {
+			"type": "local",
+			"command": ["npx","-y", "xcodebuildmcp@beta", "mcp"],
+			"enabled": true
+		},
 		"github": {
 			"type": "remote",
 			"url": "https://api.githubcopilot.com/mcp",
