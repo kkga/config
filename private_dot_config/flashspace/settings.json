@@ -1,10 +1,15 @@
 {
   "activeWorkspaceOnFocusChange" : true,
   "alternativeDisplays" : "",
+  "autoAssignAlreadyAssignedApps" : false,
+  "autoAssignAppsToWorkspaces" : false,
   "centerCursorOnFocusChange" : true,
   "centerCursorOnWorkspaceChange" : false,
   "changeWorkspaceOnAppAssign" : true,
   "checkForUpdatesAutomatically" : true,
+  "cornerHiddenApps" : [
+
+  ],
   "displayMode" : "dynamic",
   "enableFocusManagement" : true,
   "enableIntegrations" : false,
@@ -12,7 +17,8 @@
   "enableSpaceControl" : false,
   "enableSpaceControlAnimations" : false,
   "enableSpaceControlTilesAnimations" : false,
-  "enableSwipeGestures" : true,
+  "enableSwipeGestures" : false,
+  "enableWorkspaceSwitcher" : true,
   "enableWorkspaceTransitions" : false,
   "floatingApps" : [
     {
@@ -53,7 +59,7 @@
   "showFloatingNotifications" : true,
   "showMenuBarIcon" : false,
   "showMenuBarTitle" : true,
-  "showSpaceControl" : "opt+`",
+  "showRecentWorkspaceWhenActivatedTwice" : false,
   "skipEmptyWorkspacesOnSwitch" : false,
   "spaceControlCurrentDisplayWorkspaces" : true,
   "spaceControlHideEmptyWorkspaces" : true,
@@ -73,6 +79,10 @@
   "switchWorkspaceWhenPipCloses" : true,
   "toggleFocusedAppAssignment" : "opt+shift+enter",
   "toggleTheFocusedAppFloating" : "opt+shift+space",
+  "workspaceSwitcherCurrentDisplayWorkspaces" : true,
+  "workspaceSwitcherShowScreenshots" : true,
+  "workspaceSwitcherSortByLastActivation" : false,
+  "workspaceSwitcherVisibleWorkspaces" : 5,
   "workspaceTransitionDimming" : 0.15000000000000002,
   "workspaceTransitionDuration" : 0.1
 }
