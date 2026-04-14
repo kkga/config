@@ -1,8 +1,9 @@
 macos-option-as-alt = true
 theme = dark:warm-burnout-dark,light:warm-burnout-light
 font-family = MD IO
-# font-size = 13
+font-size = 13
+font-style = Medium
 font-style-bold = Semibold
-font-synthetic-style = false
+# font-synthetic-style = false
 macos-titlebar-style = tabs
 keybind = shift+enter=text:\x1b\r

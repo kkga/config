@@ -12,12 +12,12 @@ gui:
   showCommandLog: true
   theme:
     selectedLineBgColor:
-      - default
+      - reverse
     selectedRangeBgColor:
-      - default
-    activeBorderColor:
       - white
-      - bold
-    inactiveBorderColor:
-      - black
-      - bold
+    # activeBorderColor:
+    #   - white
+    #   - bold
+    # inactiveBorderColor:
+    #   - black
+    #   - bold
