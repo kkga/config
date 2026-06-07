@@ -1,6 +1,5 @@
 # VARIABLES
 
-set -gx DENO_INSTALL $HOME/.deno
 set -gx PNPM_HOME /Users/kkga/Library/pnpm
 set -gx FZF_DEFAULT_COMMAND 'fd --type=file'
 set -gx FZF_DEFAULT_OPTS '--layout=reverse --height=50% --preview-window=bottom:50%,border-top --inline-info --color=prompt:3,header:7,info:7,pointer:14:bold,marker:4,hl:4,hl+:12:,fg+:15,bg+:235'
@@ -18,7 +17,6 @@ fish_add_path \
     "$HOME/.yarn/bin" \
     "$DENO_INSTALL/bin" \
     "$PNPM_HOME" \
-    "$HOME/Library/Application Support/sand" \
     "$HOME/.opencode/bin"
 fish_add_path -m "$HOME/.local/bin"
 
@@ -28,8 +26,6 @@ abbr g git
 abbr pn pnpm
 abbr pnx pnpx
 abbr cm chezmoi
-abbr notes "zk -W ~/notes e"
-abbr notes-retool "zk -W ~/retool-notes e"
 abbr e hx
 alias ls='lsd'
 alias l='ls -l'
@@ -80,5 +76,3 @@ if status --is-interactive
     zoxide init fish --cmd j | source
     direnv hook fish | source
 end
-
-# opencode

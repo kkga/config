@@ -11,14 +11,14 @@
 
   ],
   "displayMode" : "dynamic",
-  "enableFocusManagement" : true,
+  "enableFocusManagement" : false,
   "enableIntegrations" : false,
   "enablePictureInPictureSupport" : true,
   "enableSpaceControl" : false,
   "enableSpaceControlAnimations" : false,
-  "enableSpaceControlTilesAnimations" : false,
+  "enableSpaceControlTilesAnimations" : true,
   "enableSwipeGestures" : false,
-  "enableWorkspaceSwitcher" : true,
+  "enableWorkspaceSwitcher" : false,
   "enableWorkspaceTransitions" : false,
   "floatingApps" : [
     {
@@ -55,11 +55,11 @@
   "runScriptOnLaunch" : "",
   "runScriptOnProfileChange" : "sketchybar --reload",
   "runScriptOnWorkspaceChange" : "sketchybar --trigger flashspace_workspace_change WORKSPACE=\"$WORKSPACE\" DISPLAY=\"$DISPLAY\"",
-  "showFlashSpace" : "ctrl+opt+shift+delete",
   "showFloatingNotifications" : true,
   "showMenuBarIcon" : false,
   "showMenuBarTitle" : true,
   "showRecentWorkspaceWhenActivatedTwice" : false,
+  "showWorkspaceSwitcher" : "opt+tab",
   "skipEmptyWorkspacesOnSwitch" : false,
   "spaceControlCurrentDisplayWorkspaces" : true,
   "spaceControlHideEmptyWorkspaces" : true,
@@ -83,6 +83,6 @@
   "workspaceSwitcherShowScreenshots" : true,
   "workspaceSwitcherSortByLastActivation" : false,
   "workspaceSwitcherVisibleWorkspaces" : 5,
-  "workspaceTransitionDimming" : 0.15000000000000002,
+  "workspaceTransitionDimming" : 0.1,
   "workspaceTransitionDuration" : 0.1
 }

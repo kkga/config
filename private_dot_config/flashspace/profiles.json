@@ -43,11 +43,6 @@
         {
           "apps" : [
             {
-              "bundleIdentifier" : "com.google.Chrome.beta",
-              "iconPath" : "/Applications/Google Chrome Beta.app/Contents/Resources/app.icns",
-              "name" : "Google Chrome Beta"
-            },
-            {
               "bundleIdentifier" : "com.microsoft.VSCode",
               "iconPath" : "/Applications/Visual Studio Code.app/Contents/Resources/Code.icns",
               "name" : "Code"
@@ -58,9 +53,19 @@
               "name" : "Xcode"
             },
             {
+              "bundleIdentifier" : "com.apple.iphonesimulator",
+              "iconPath" : "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/Contents/Resources/AppIcon.icns",
+              "name" : "Simulator"
+            },
+            {
               "bundleIdentifier" : "com.mitchellh.ghostty",
               "iconPath" : "/Applications/Ghostty.app/Contents/Resources/Ghostty.icns",
               "name" : "Ghostty"
+            },
+            {
+              "bundleIdentifier" : "com.anthropic.claudefordesktop",
+              "iconPath" : "/Applications/Claude.app/Contents/Resources/electron.icns",
+              "name" : "Claude"
             }
           ],
           "assignAppShortcut" : "opt+shift+3",
@@ -73,7 +78,26 @@
         },
         {
           "apps" : [
-
+            {
+              "bundleIdentifier" : "com.culturedcode.ThingsMac",
+              "iconPath" : "/Applications/Things3.app/Contents/Resources/AppIcon.icns",
+              "name" : "Things"
+            },
+            {
+              "bundleIdentifier" : "com.apple.reminders",
+              "iconPath" : "/System/Applications/Reminders.app/Contents/Resources/AppIcon.icns",
+              "name" : "Reminders"
+            },
+            {
+              "bundleIdentifier" : "com.apple.Notes",
+              "iconPath" : "/System/Applications/Notes.app/Contents/Resources/AppIcon.icns",
+              "name" : "Notes"
+            },
+            {
+              "bundleIdentifier" : "com.apple.iCal",
+              "iconPath" : "/System/Applications/Calendar.app/Contents/Resources/AppIcon.icns",
+              "name" : "Calendar"
+            }
           ],
           "assignAppShortcut" : "opt+shift+4",
           "display" : "Built-in Retina Display",
@@ -121,11 +145,6 @@
               "name" : "IINA"
             },
             {
-              "bundleIdentifier" : "com.apple.reminders",
-              "iconPath" : "/System/Applications/Reminders.app/Contents/Resources/AppIcon.icns",
-              "name" : "Reminders"
-            },
-            {
               "bundleIdentifier" : "com.zwift.ZwiftLauncher",
               "iconPath" : "/Applications/Zwift.app/Contents/Resources/AppIcon.icns",
               "name" : "Zwift"
@@ -139,16 +158,6 @@
               "bundleIdentifier" : "com.apple.Stickies",
               "iconPath" : "/System/Applications/Stickies.app/Contents/Resources/AppIcon.icns",
               "name" : "Stickies"
-            },
-            {
-              "bundleIdentifier" : "com.apple.Notes",
-              "iconPath" : "/System/Applications/Notes.app/Contents/Resources/AppIcon.icns",
-              "name" : "Notes"
-            },
-            {
-              "bundleIdentifier" : "com.apple.iCal",
-              "iconPath" : "/System/Applications/Calendar.app/Contents/Resources/AppIcon.icns",
-              "name" : "Calendar"
             }
           ],
           "assignAppShortcut" : "opt+shift+`",
