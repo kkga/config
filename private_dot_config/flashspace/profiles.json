@@ -66,6 +66,11 @@
               "bundleIdentifier" : "com.anthropic.claudefordesktop",
               "iconPath" : "/Applications/Claude.app/Contents/Resources/electron.icns",
               "name" : "Claude"
+            },
+            {
+              "bundleIdentifier" : "dev.openchamber.desktop",
+              "iconPath" : "/Applications/OpenChamber.app/Contents/Resources/icon.icns",
+              "name" : "OpenChamber"
             }
           ],
           "assignAppShortcut" : "opt+shift+3",
@@ -160,11 +165,10 @@
               "name" : "Stickies"
             }
           ],
-          "assignAppShortcut" : "opt+shift+`",
           "display" : "Built-in Retina Display",
           "id" : "02EF8117-E9D4-48C8-9EEC-62C7F5264202",
           "name" : "Scratch",
-          "shortcut" : "opt+`",
+          "openAppsOnActivation" : false,
           "symbolIconName" : "square.dashed"
         }
       ]

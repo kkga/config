@@ -16,6 +16,9 @@
 			"enabled": true,
 			"headers": {
 				"Authorization": "Bearer {env:GITHUB_PAT}"
+			},
+			"oauth": {
+				"redirectUri": "http://127.0.0.1:57123/mcp/oauth/callback?server=github&directory=%2FUsers%2Fkkga%2Fprojects%2FUpdraft"
 			}
 		}
 	},
@@ -24,5 +27,6 @@
 			"command": ["swift", "format", "format", "--in-place", "$FILE"],
 			"extensions": [".swift"]
 		}
-	}
+	},
+	"lsp": false
 }

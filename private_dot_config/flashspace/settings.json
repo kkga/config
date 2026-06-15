@@ -44,7 +44,9 @@
   "loopWorkspaces" : true,
   "loopWorkspacesOnAllDisplays" : false,
   "menuBarDisplayAliases" : "",
+  "menuBarTitleScriptPath" : "",
   "menuBarTitleTemplate" : "$WORKSPACE",
+  "menuBarTitleUseScript" : false,
   "pipApps" : [
 
   ],
@@ -59,7 +61,8 @@
   "showMenuBarIcon" : false,
   "showMenuBarTitle" : true,
   "showRecentWorkspaceWhenActivatedTwice" : false,
-  "showWorkspaceSwitcher" : "opt+tab",
+  "showSpaceControl" : "cmd+`",
+  "showWorkspaceSwitcher" : "cmd+`",
   "skipEmptyWorkspacesOnSwitch" : false,
   "spaceControlCurrentDisplayWorkspaces" : true,
   "spaceControlHideEmptyWorkspaces" : true,
