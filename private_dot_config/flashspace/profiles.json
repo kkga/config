@@ -58,11 +58,6 @@
               "name" : "Simulator"
             },
             {
-              "bundleIdentifier" : "com.mitchellh.ghostty",
-              "iconPath" : "/Applications/Ghostty.app/Contents/Resources/Ghostty.icns",
-              "name" : "Ghostty"
-            },
-            {
               "bundleIdentifier" : "com.anthropic.claudefordesktop",
               "iconPath" : "/Applications/Claude.app/Contents/Resources/electron.icns",
               "name" : "Claude"
@@ -71,6 +66,11 @@
               "bundleIdentifier" : "dev.openchamber.desktop",
               "iconPath" : "/Applications/OpenChamber.app/Contents/Resources/icon.icns",
               "name" : "OpenChamber"
+            },
+            {
+              "bundleIdentifier" : "com.mitchellh.ghostty",
+              "iconPath" : "/Applications/Ghostty.app/Contents/Resources/Ghostty.icns",
+              "name" : "Ghostty"
             }
           ],
           "assignAppShortcut" : "opt+shift+3",

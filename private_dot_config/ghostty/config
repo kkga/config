@@ -1,9 +1,10 @@
 macos-option-as-alt = true
 theme = dark:warm-burnout-dark,light:warm-burnout-light
-# font-family = SF Mono
-# font-size = 13
+# font-family = CommitMono
+# font-size = 14
+# adjust-cell-height = 6
 # font-style = Medium
 # font-style-bold = Semibold
-# font-synthetic-style = false
+font-synthetic-style = false
 macos-titlebar-style = tabs
 keybind = shift+enter=text:\x1b\r
