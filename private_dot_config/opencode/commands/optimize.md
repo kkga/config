@@ -1,41 +1,30 @@
 ---
-description: Open a pull request from the current branch with a generated title and summary
-agent: build
+description: Suggest concrete performance improvements for the given file or directory
+agent: plan
 ---
 
-Create a pull request from the current branch:
+Analyze the target for performance issues: `$ARGUMENTS` *(or the current branch's changes if empty)*.
 
-1. Read the current state:
+Cover these dimensions in this order:
 
-!`git status --short`
-!`git log main..HEAD --oneline`
-!`git diff main...HEAD --stat`
+1. **Algorithmic** — wrong data structure, O(n²) where O(n) is possible, repeated work.
+2. **I/O** — N+1 queries, missing indexes, sync calls on hot paths, unbatched network requests.
+3. **Memory** — unbounded growth, leaks, large in-memory snapshots that could stream.
+4. **Frontend (if applicable)** — re-render cascades, large bundles, unmemoized expensive renders, blocking main-thread work.
+5. **Micro-optimizations** — only if (1)–(4) are clean and the call site is genuinely hot.
 
-2. Decide on a PR title:
-   - Match the repo's conventional-commits style (`feat:`, `fix:`, `refactor:`, `docs:`, …)
-   - One short sentence, under ~70 chars
-   - Imperative voice ("Add X" not "Added X")
-
-3. Write the PR body using this template:
+For each suggestion, output:
 
 ```
-## Summary
-<1–3 bullets — what changed and why, not how>
-
-## Test plan
-- [ ] <verifiable step>
-- [ ] <verifiable step>
+[Impact] <summary>
+  Where:  <file:line>
+  Before: <snippet>
+  After:  <snippet>
+  Why:    <one sentence — what's faster and roughly by how much>
 ```
 
-4. Push the branch if it's not yet on the remote, then create the PR:
+Impact tiers: **High** (>10× or removes the bottleneck) · **Medium** (2–10×) · **Low** (small constant factor).
 
-```bash
-git push -u origin HEAD       # only if needed
-gh pr create --title "<title>" --body "<body>"
-```
+**Don't** make the changes yet. End by asking which suggestions to apply.
 
-5. Print the resulting PR URL when done.
-
-Extra context (optional, from the user): `$ARGUMENTS`
-
-**Don't** force-push, amend pushed commits, or rebase main into the branch unless explicitly asked.
+Optional flag — pass `--apply` in arguments to skip the discussion and implement the High-impact suggestions directly.
