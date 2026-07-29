@@ -1,9 +1,6 @@
 {
 	"$schema": "https://opencode.ai/config.json",
-	"plugin": [
-		"opencode-gemini-auth@latest",
-		"superpowers@git+https://github.com/obra/superpowers.git"
-	],
+	"plugin": ["superpowers@git+https://github.com/obra/superpowers.git"],
 	"mcp": {
 		"xcode": {
 			"type": "local",
@@ -14,11 +11,9 @@
 			"type": "remote",
 			"url": "https://api.githubcopilot.com/mcp",
 			"enabled": true,
+			"oauth": false,
 			"headers": {
 				"Authorization": "Bearer {env:GITHUB_PAT}"
-			},
-			"oauth": {
-				"redirectUri": "http://127.0.0.1:57123/mcp/oauth/callback?server=github&directory=%2FUsers%2Fkkga%2Fprojects%2FUpdraft"
 			}
 		}
 	},
