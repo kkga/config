@@ -94,14 +94,14 @@
               "name" : "Reminders"
             },
             {
-              "bundleIdentifier" : "com.apple.Notes",
-              "iconPath" : "/System/Applications/Notes.app/Contents/Resources/AppIcon.icns",
-              "name" : "Notes"
-            },
-            {
               "bundleIdentifier" : "com.apple.iCal",
               "iconPath" : "/System/Applications/Calendar.app/Contents/Resources/AppIcon.icns",
               "name" : "Calendar"
+            },
+            {
+              "bundleIdentifier" : "com.apple.Notes",
+              "iconPath" : "/System/Applications/Notes.app/Contents/Resources/AppIcon.icns",
+              "name" : "Notes"
             }
           ],
           "assignAppShortcut" : "opt+shift+4",

@@ -1,10 +1,10 @@
 macos-option-as-alt = true
 theme = dark:warm-burnout-dark,light:warm-burnout-light
-# font-family = Cascadia Code
-# font-size = 15
+# font-family = MD IO
+# font-size = 14
 # adjust-cell-height = 6
-# font-style = Medium
-# font-style-bold = Semibold
+font-style = Medium
+font-style-bold = Bold
 font-synthetic-style = false
 macos-titlebar-style = tabs
 keybind = shift+enter=text:\x1b\r
