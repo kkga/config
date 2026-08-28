@@ -25,37 +25,11 @@
 	},
 	"lsp": false,
 	"permission": {
-		"bash": {
-			"*": "ask",
-			"git status": "allow",
-			"git status *": "allow",
-			"git diff": "allow",
-			"git diff *": "allow",
-			"git log": "allow",
-			"git log *": "allow",
-			"git show": "allow",
-			"git show *": "allow",
-			"git branch": "allow",
-			"git branch -a": "allow",
-			"git branch -r": "allow",
-			"git branch -v": "allow",
-			"git branch -vv": "allow",
-			"git branch --all": "allow",
-			"git branch --remotes": "allow",
-			"git branch --list *": "allow",
-			"git stash list": "allow",
-			"swift build": "allow",
-			"swift build *": "allow",
-			"swift test": "allow",
-			"swift test *": "allow",
-			"swift format": "allow",
-			"swift format *": "allow"
-		},
 		"webfetch": "allow",
 		"websearch": "allow",
 		"external_directory": {
 			"*": "ask",
-			"/var/folders/73/f1g6gfkj1ws8s514gkcp89q40000gn/T/opencode/**": "allow",
+			"/var/folders/73/f1g6gfkj1ws8s514gkcp89q40000gn/T/**": "allow",
 			"/tmp/**": "allow",
 			"/private/tmp/**": "allow"
 		}
