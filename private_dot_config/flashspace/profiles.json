@@ -71,6 +71,11 @@
               "bundleIdentifier" : "com.mitchellh.ghostty",
               "iconPath" : "/Applications/Ghostty.app/Contents/Resources/Ghostty.icns",
               "name" : "Ghostty"
+            },
+            {
+              "bundleIdentifier" : "com.apple.dt.Devices",
+              "iconPath" : "/Applications/Xcode-27.0.0-Release.Candidate.app/Contents/Applications/DeviceHub.app/Contents/Resources/AppIcon.icns",
+              "name" : "Device Hub"
             }
           ],
           "assignAppShortcut" : "opt+shift+3",
