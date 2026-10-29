@@ -2,18 +2,14 @@
 	"$schema": "https://opencode.ai/config.json",
 	// "plugin": ["superpowers@git+https://github.com/obra/superpowers.git"],
 	"mcp": {
-		"xcode": {
-			"type": "local",
-			"command": ["xcrun", "mcpbridge"],
-			"enabled": true
-		},
-		"github": {
-			"type": "remote",
-			"url": "https://api.githubcopilot.com/mcp",
-			"enabled": true,
-			"oauth": false,
-			"headers": {
-				"Authorization": "Bearer {env:GITHUB_PAT}"
+		"servers": {
+			"github": {
+				"type": "remote",
+				"url": "https://api.githubcopilot.com/mcp",
+				"oauth": false,
+				"headers": {
+					"Authorization": "Bearer {env:GITHUB_PAT}"
+				}
 			}
 		}
 	},
@@ -24,6 +20,11 @@
 		}
 	},
 	"lsp": false,
+	"experimental": {
+		"location_idle_timeout": "4 hours",
+		"todo": true,
+		"subagent_depth": 2
+	},
 	"permission": {
 		"webfetch": "allow",
 		"websearch": "allow",

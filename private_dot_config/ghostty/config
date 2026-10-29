@@ -7,4 +7,6 @@ font-style = Medium
 font-style-bold = Bold
 font-synthetic-style = false
 macos-titlebar-style = tabs
+# auto-update-channel = tip
 keybind = shift+enter=text:\x1b\r
+

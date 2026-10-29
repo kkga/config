@@ -8,7 +8,7 @@
           "apps" : [
             {
               "bundleIdentifier" : "com.apple.Safari",
-              "iconPath" : "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/Resources/AppIcon.icns",
+              "iconPath" : "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/Contents/Resources/AppIconUpdated.icns",
               "name" : "Safari"
             }
           ],
@@ -31,6 +31,11 @@
               "bundleIdentifier" : "com.google.Chrome",
               "iconPath" : "/Applications/Google Chrome.app/Contents/Resources/app.icns",
               "name" : "Google Chrome"
+            },
+            {
+              "bundleIdentifier" : "com.microsoft.VSCode",
+              "iconPath" : "/Applications/Visual Studio Code.app/Contents/Resources/Code.icns",
+              "name" : "Code"
             }
           ],
           "assignAppShortcut" : "opt+shift+2",
@@ -42,16 +47,6 @@
         },
         {
           "apps" : [
-            {
-              "bundleIdentifier" : "com.microsoft.VSCode",
-              "iconPath" : "/Applications/Visual Studio Code.app/Contents/Resources/Code.icns",
-              "name" : "Code"
-            },
-            {
-              "bundleIdentifier" : "com.apple.dt.Xcode",
-              "iconPath" : "/Applications/Xcode.app/Contents/Resources/Xcode.icns",
-              "name" : "Xcode"
-            },
             {
               "bundleIdentifier" : "com.apple.iphonesimulator",
               "iconPath" : "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/Contents/Resources/AppIcon.icns",
@@ -68,13 +63,18 @@
               "name" : "OpenChamber"
             },
             {
+              "bundleIdentifier" : "com.apple.dt.Xcode",
+              "iconPath" : "/Applications/Xcode-27.2.0-Beta.2.app/Contents/Resources/XcodeBeta.icns",
+              "name" : "Xcode"
+            },
+            {
               "bundleIdentifier" : "com.mitchellh.ghostty",
               "iconPath" : "/Applications/Ghostty.app/Contents/Resources/Ghostty.icns",
               "name" : "Ghostty"
             },
             {
               "bundleIdentifier" : "com.apple.dt.Devices",
-              "iconPath" : "/Applications/Xcode-27.0.0-Release.Candidate.app/Contents/Applications/DeviceHub.app/Contents/Resources/AppIcon.icns",
+              "iconPath" : "/Applications/Xcode-27.2.0-Beta.2.app/Contents/Applications/DeviceHub.app/Contents/Resources/AppIcon.icns",
               "name" : "Device Hub"
             }
           ],
