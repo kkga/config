@@ -8,22 +8,22 @@
 				"url": "https://api.githubcopilot.com/mcp",
 				"oauth": false,
 				"headers": {
-					"Authorization": "Bearer {env:GITHUB_PAT}"
-				}
-			}
-		}
+					"Authorization": "Bearer {file:~/.config/opencode/github_pat}",
+				},
+			},
+		},
 	},
 	"formatter": {
 		"swift-format": {
 			"command": ["swift", "format", "format", "--in-place", "$FILE"],
-			"extensions": [".swift"]
-		}
+			"extensions": [".swift"],
+		},
 	},
 	"lsp": false,
 	"experimental": {
 		"location_idle_timeout": "4 hours",
 		"todo": true,
-		"subagent_depth": 2
+		"subagent_depth": 2,
 	},
 	"permission": {
 		"webfetch": "allow",
@@ -32,7 +32,7 @@
 			"*": "ask",
 			"/var/folders/73/f1g6gfkj1ws8s514gkcp89q40000gn/T/**": "allow",
 			"/tmp/**": "allow",
-			"/private/tmp/**": "allow"
-		}
-	}
+			"/private/tmp/**": "allow",
+		},
+	},
 }

@@ -53,11 +53,6 @@
               "name" : "Simulator"
             },
             {
-              "bundleIdentifier" : "com.anthropic.claudefordesktop",
-              "iconPath" : "/Applications/Claude.app/Contents/Resources/electron.icns",
-              "name" : "Claude"
-            },
-            {
               "bundleIdentifier" : "dev.openchamber.desktop",
               "iconPath" : "/Applications/OpenChamber.app/Contents/Resources/icon.icns",
               "name" : "OpenChamber"
@@ -107,6 +102,11 @@
               "bundleIdentifier" : "com.apple.Notes",
               "iconPath" : "/System/Applications/Notes.app/Contents/Resources/AppIcon.icns",
               "name" : "Notes"
+            },
+            {
+              "bundleIdentifier" : "com.anthropic.claudefordesktop",
+              "iconPath" : "/Applications/Claude.app/Contents/Resources/electron.icns",
+              "name" : "Claude"
             }
           ],
           "assignAppShortcut" : "opt+shift+4",
